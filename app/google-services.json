@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "994401393915",
+    "project_id": "fst-cloud",
+    "storage_bucket": "fst-cloud.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994401393915:android:dd27e8709f020680ad245e",
+        "android_client_info": {
+          "package_name": "com.example.fstsignin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994401393915-nkjo3kee4jia1n24qunv871nadl0a6ng.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fstsignin",
+            "certificate_hash": "b43a63f1a492a6286b7bc50c2c47cc5278b5cff2"
+          }
+        },
+        {
+          "client_id": "994401393915-2f2prirulqahfljlhk8bieahm7vhelp0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1cJELLIkvbSZkfs1JYK2xlgoWZmG7cnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994401393915-2f2prirulqahfljlhk8bieahm7vhelp0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
