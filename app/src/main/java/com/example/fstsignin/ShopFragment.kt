@@ -13,8 +13,10 @@ class ShopFragment(context : Context) : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        var v : View = LayoutInflater.from(context).inflate(R.layout.activity_shop_fragment,
+
+    ): View?
+    {
+        val v : View = LayoutInflater.from(context).inflate(R.layout.activity_shop_fragment,
             container,false)
 
         return v
