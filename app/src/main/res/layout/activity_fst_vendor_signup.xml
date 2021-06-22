@@ -80,6 +80,7 @@
             android:background="@drawable/logo"
             android:drawablePadding="10dp"
             android:hint="Enter Username"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_user" />
 
         <EditText
@@ -90,6 +91,7 @@
             android:background="@drawable/logo"
             android:drawablePadding="10dp"
             android:hint="Enter Restaurant Name"
+            android:singleLine="true"
             android:drawableRight="@drawable/ic_user" />
 
         <EditText
@@ -100,6 +102,7 @@
             android:drawableRight="@drawable/ic_email"
             android:paddingRight="15dp"
             android:layout_marginTop="10dp"
+            android:singleLine="true"
             android:id="@+id/vendor_Email"
             ></EditText>
 
@@ -113,6 +116,7 @@
             android:inputType="number"
             android:drawableRight="@drawable/ic_phone"
             android:id="@+id/vendor_Phoneno"
+            android:singleLine="true"
             ></EditText>
 
         <EditText
@@ -124,6 +128,7 @@
             android:inputType="textPassword"
             android:drawableRight="@drawable/ic_password"
             android:id="@+id/vendor_Password"
+            android:singleLine="true"
             ></EditText>
 
 
@@ -136,6 +141,7 @@
             android:inputType="textPassword"
             android:drawableRight="@drawable/ic_password"
             android:id="@+id/vendor_Repassword"
+            android:singleLine="true"
             ></EditText>
 
 

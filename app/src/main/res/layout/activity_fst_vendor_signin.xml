@@ -93,6 +93,7 @@
             android:drawableRight="@drawable/ic_email"
             android:drawablePadding="20sp"
             android:id="@+id/vendor_signinemail"
+            android:singleLine="true"
             ></EditText>
 
 
@@ -104,6 +105,7 @@
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_password"
             android:hint="Enter password"
+            android:singleLine="true"
             android:inputType="textPassword"></EditText>
 
         <TextView

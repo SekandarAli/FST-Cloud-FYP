@@ -29,7 +29,7 @@ class FSTRegisterPage : AppCompatActivity() {
 
         signin.setOnClickListener(View.OnClickListener {
 
-            intent = Intent(this,FST_Vendor_Signin::class.java)
+            intent = Intent(this,FSTSignIn::class.java)
             startActivity(intent)
         })
 
