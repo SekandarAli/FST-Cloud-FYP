@@ -78,7 +78,7 @@ class Map_location : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         Map = googleMap
-        var zoom = 17f
+        var zoom = 14f
         getLocationAccess()
 
         // Add a marker and move the camera

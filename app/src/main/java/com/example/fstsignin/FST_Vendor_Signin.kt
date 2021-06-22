@@ -13,30 +13,29 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class FSTSignIn : AppCompatActivity() {
+class FST_Vendor_Signin : AppCompatActivity() {
 
     lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_fstsign_in)
+        setContentView(R.layout.activity_fst_vendor_signin)
 
         supportActionBar?.hide()
 
         auth = Firebase.auth
 
-        val login : Button = findViewById(R.id.login)
-        val tvsignup : TextView = findViewById(R.id.tvsignup)
-        val forgetpassword : TextView = findViewById(R.id.forgetpassword)
-        val signinemail : EditText = findViewById(R.id.signinemail)
-        val signinpassword : EditText = findViewById(R.id.signinpassword)
-        val switch_signin_user : Switch = findViewById(R.id.switch_signIn_user)
+        val vendor_login : Button = findViewById(R.id.vendor_login)
+        val vendor_forgetpassword : TextView = findViewById(R.id.vendor_forgetpassword)
+        val vendor_signinemail : EditText = findViewById(R.id.vendor_signinemail)
+        val vendor_signinpassword : EditText = findViewById(R.id.vendor_signinpassword)
+        val switch_signin_vendor : Switch = findViewById(R.id.switch_signIn_vendor)
 
-        switch_signin_user.setOnCheckedChangeListener { buttonView, isChecked ->
+        switch_signin_vendor.setOnCheckedChangeListener { buttonView, isChecked ->
             if (isChecked) {
-                intent = Intent(this, FST_Vendor_Signin::class.java)
+                intent = Intent(this, FSTSignIn::class.java)
                 startActivity(intent)
-                switch_signin_user.text = "User"
+                switch_signin_vendor.text = "Vendor"
 
 
             }
@@ -46,14 +45,14 @@ class FSTSignIn : AppCompatActivity() {
 
 
 
-        signinpassword.setOnClickListener{
-            signinpassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
+        vendor_signinpassword.setOnClickListener{
+            vendor_signinpassword.transformationMethod = HideReturnsTransformationMethod.getInstance()
         }
 
 
 
 
-        login.setOnClickListener(View.OnClickListener {
+        vendor_login.setOnClickListener(View.OnClickListener {
 
             var pd = ProgressDialog(this)
             pd.setTitle("SignIp in progress...")
@@ -66,14 +65,14 @@ class FSTSignIn : AppCompatActivity() {
 //    val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
 //    inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
 
-            if (signinemail.text.isNullOrEmpty()) {
-                signinemail?.error ="Email cannot be empty."
-                signinemail.isFocusable
+            if (vendor_signinemail.text.isNullOrEmpty()) {
+                vendor_signinemail?.error ="Email cannot be empty."
+                vendor_signinemail.isFocusable
             }
 
-            else if (signinpassword?.text.isNullOrEmpty()) {
-                signinpassword?.error ="Password cannot be empty."
-                signinpassword.isFocusable
+            else if (vendor_signinpassword?.text.isNullOrEmpty()) {
+                vendor_signinpassword?.error ="Password cannot be empty."
+                vendor_signinpassword.isFocusable
 
             }
 
@@ -85,25 +84,25 @@ class FSTSignIn : AppCompatActivity() {
 //    }
 
 
-            else if (signinemail.text.isEmpty() && signinpassword.text.isEmpty()) {
-                signinpassword?.error ="Empty."
-                signinemail?.error ="Empty."
-                signinemail.isFocusable
+            else if (vendor_signinemail.text.isEmpty() && vendor_signinpassword.text.isEmpty()) {
+                vendor_signinpassword?.error ="Empty."
+                vendor_signinemail?.error ="Empty."
+                vendor_signinemail.isFocusable
             }
 
-            else if (signinemail.text.isNotEmpty() && signinpassword.text.isNotEmpty()) {
+            else if (vendor_signinemail.text.isNotEmpty() && vendor_signinpassword.text.isNotEmpty()) {
 
                 pd.show()
 
                 auth.signInWithEmailAndPassword(
-                    signinemail.text.toString(),
-                    signinpassword.text.toString()
+                    vendor_signinemail.text.toString(),
+                    vendor_signinpassword.text.toString()
                 )
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
 
                             val user = auth.currentUser
-                            updateUI(user,signinemail.text.toString())
+                            updateUI(user,vendor_signinemail.text.toString())
 
                         }
                         else
@@ -120,14 +119,7 @@ class FSTSignIn : AppCompatActivity() {
         })
 
 
-
-        tvsignup.setOnClickListener(View.OnClickListener {
-
-            intent = Intent(this,FSTSignUp::class.java)
-            startActivity(intent)
-        })
-
-        forgetpassword.setOnClickListener(View.OnClickListener {
+        vendor_forgetpassword.setOnClickListener(View.OnClickListener {
 
             intent = Intent(this,FSTForgetpassword::class.java)
             startActivity(intent)
@@ -159,3 +151,5 @@ class FSTSignIn : AppCompatActivity() {
 
 
 }
+
+

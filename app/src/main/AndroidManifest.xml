@@ -5,8 +5,6 @@
     <queries>
         <package android:name="com.google.android.apps.maps" />
     </queries>
-
-
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -21,7 +19,8 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-
+        <activity android:name=".FST_Vendor_Signin"></activity>
+        <activity android:name=".FST_Vendor_Signup" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -36,7 +35,7 @@
 
         <activity
             android:name=".Map_location"
-            android:label="@string/title_activity_map_location"></activity>
+            android:label="@string/title_activity_map_location" />
         <activity android:name=".HOMEPAGE" />
         <activity android:name=".FoodMainPageFST" />
         <activity android:name=".FSTForgetpage2" />
@@ -53,15 +52,13 @@
         <activity android:name=".FSTSignIn" />
         <activity android:name=".FSTRegisterPage" />
 
-        <service android:name=".CloudMessaging_Firebase"
+        <service
+            android:name=".CloudMessaging_Firebase"
             android:exported="false">
-
             <intent-filter>
-
-                <action android:name="com.google.firebase.MESSAGING_EVENT"></action>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

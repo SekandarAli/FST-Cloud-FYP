@@ -8,10 +8,7 @@ import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
@@ -39,6 +36,18 @@ class FSTSignUp : AppCompatActivity() {
         val signupphoneno : EditText = findViewById(R.id.signupphoneno)
         val signuppassword : EditText = findViewById(R.id.signuppassword)
         val signuprepassword : EditText = findViewById(R.id.signuprepassword)
+        val s : Switch = findViewById(R.id.switch1)
+
+        s.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                intent = Intent(this, FST_Vendor_Signup::class.java)
+                startActivity(intent)
+                s.text = "User"
+
+
+            }
+
+        }
 
 
 
@@ -77,8 +86,8 @@ class FSTSignUp : AppCompatActivity() {
                 signuppassword?.error = "Password cannot be empty."
                 signuppassword.isFocusable
 
-            } else if (signuppassword?.text.length < 8) {
-                signuppassword?.error = "Password must contain more than 8 words."
+            } else if (signuppassword?.text.length < 2) {
+                signuppassword?.error = "Password must contain more than 3 words."
                 signuppassword.isFocusable
 
             } else if (signupusername?.text.isNullOrEmpty()) {

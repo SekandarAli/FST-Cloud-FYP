@@ -15,10 +15,19 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:layout_weight="1"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_gravity="center"
     android:gravity="center"
     >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="0.3"
+        >
 
 
         <ImageView
@@ -29,6 +38,28 @@
             android:src="@drawable/signinlogo"
             ></ImageView>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="0.5"
+        >
+        <Switch
+            android:id="@+id/switch_signIn_user"
+            style="@style/switch_signin"
+            android:background="@drawable/button"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:text="User"/>
+
+
+</LinearLayout>
 
 
 
@@ -50,7 +81,7 @@
         <TextView
             android:id="@+id/tv1"
             style="@style/heading"
-            android:text="SignIn To Account" />
+            android:text="SignIn To User Account" />
 
     <EditText
 

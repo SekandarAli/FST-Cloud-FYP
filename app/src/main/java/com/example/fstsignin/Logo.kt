@@ -19,7 +19,7 @@ class Logo : AppCompatActivity() {
             val intent = Intent(this,FSTRegisterPage::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 30)
 
 
 
