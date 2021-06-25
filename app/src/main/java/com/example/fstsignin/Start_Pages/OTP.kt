@@ -45,6 +45,66 @@ class OTP : AppCompatActivity() {
         val otp6 : EditText = findViewById(R.id.otp_edit_box6)
 
 
+
+
+        otp1.setOnKeyListener { v, keyCode, event ->
+
+
+            if(otp1.text.length == 1)
+            {
+                otp2.requestFocus()
+            }
+
+            return@setOnKeyListener false
+        }
+
+             otp2.setOnKeyListener { v, keyCode, event ->
+
+
+            if(otp2.text.length == 1)
+            {
+                otp3.requestFocus()
+            }
+
+            return@setOnKeyListener false
+        }
+
+             otp3.setOnKeyListener { v, keyCode, event ->
+
+
+            if(otp3.text.length == 1)
+            {
+                otp4.requestFocus()
+            }
+
+            return@setOnKeyListener false
+        }
+
+             otp4.setOnKeyListener { v, keyCode, event ->
+
+
+            if(otp4.text.length == 1)
+            {
+                otp5.requestFocus()
+            }
+
+            return@setOnKeyListener false
+        }
+
+             otp5.setOnKeyListener { v, keyCode, event ->
+
+
+            if(otp5.text.length == 1)
+            {
+                otp6.requestFocus()
+            }
+
+            return@setOnKeyListener false
+        }
+
+
+
+
         sendotp.setOnClickListener {
 
             val Phone = USEROTP.text.toString().trim()
@@ -60,6 +120,8 @@ class OTP : AppCompatActivity() {
                     otp4.text.toString()+otp5.text.toString()+otp6.text.toString()
 
          otpp.trim()
+
+
 
             Toast.makeText(this, "code = "+ otpp, Toast.LENGTH_SHORT).show()
             verifyVerification(otpp)

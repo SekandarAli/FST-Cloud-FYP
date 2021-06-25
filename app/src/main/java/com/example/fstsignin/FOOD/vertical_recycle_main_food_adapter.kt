@@ -10,6 +10,9 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
+import com.example.fstsignin.SHOP.ShopFragment
+import com.example.fstsignin.SHOP.ShopMainPageFST
+import com.example.fstsignin.TRAVEL.TravelMainPageFST
 
 class vertical_recycle_main_food_adapter(var items : ArrayList<vertical_recycle_main_food_model>, context
                 : Context) : RecyclerView.Adapter<vertical_recycle_main_food_adapter.ViewHolder>() {
@@ -59,7 +62,7 @@ class vertical_recycle_main_food_adapter(var items : ArrayList<vertical_recycle_
             itemRating = itemView.findViewById(R.id.rating)
 
         itemView.setOnClickListener(View.OnClickListener {
-            var intent = Intent(context, FoodMainPageFST::class.java)
+            var intent = Intent(context,TravelMainPageFST::class.java)
             startActivity(context,intent,null)
         })
 
