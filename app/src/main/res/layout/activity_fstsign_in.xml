@@ -153,11 +153,6 @@
             android:src="@drawable/google"
             ></ImageView>
 
-        <ImageView
-            style="@style/socialmediaicon"
-            android:src="@drawable/twitter"
-            ></ImageView>
-
 
     </LinearLayout>
 
