@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/background"
     android:gravity="center"
-    tools:context=".FSTSignUp">
+    tools:context=".SIGN_UP.FSTSignUp">
 
 
     <LinearLayout
