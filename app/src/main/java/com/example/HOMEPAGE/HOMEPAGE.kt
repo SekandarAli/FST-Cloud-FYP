@@ -40,10 +40,10 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
         var drawerlayout=findViewById<DrawerLayout>(R.id.drawerlayout)
         setSupportActionBar(toolbar)
-        val togglebar = ActionBarDrawerToggle(this, drawerlayout,toolbar,
-            R.string.open,
-            R.string.close
-        )
+
+
+        val togglebar = ActionBarDrawerToggle(this, drawerlayout,toolbar,R.string.open,R.string.close)
+
         togglebar.isDrawerIndicatorEnabled=true
         drawerlayout.addDrawerListener(togglebar)
         togglebar.syncState()
@@ -61,7 +61,6 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
 
 
-        // val viewpager : FrameLayout = findViewById(R.id.viewPager)
         val tab : TabLayout = findViewById(R.id.tab)
 
 
