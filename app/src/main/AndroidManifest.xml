@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fstsignin">
 
     <queries>
@@ -19,9 +20,12 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name=".Start_Pages.OTP_next_Page"></activity>
+        <activity android:name=".Vendor.Vendor_Show_Image"></activity>
+        <activity android:name=".Vendor.Vendor_Add_picture" />
+        <activity android:name=".Vendor.Vendor_Show_Data" />
+        <activity android:name=".Vendor.Vendor_Add_Data" />
+        <activity android:name=".Vendor.Vendor_Main_Page" />
         <activity android:name=".Start_Pages.OTP" />
-        <activity android:name=".FST_Vendor_Signup" />
         <activity android:name=".SIGN_IN.FST_Vendor_Signin" />
         <activity android:name=".SIGN_UP.FST_Vendor_Signup" />
         <!--
@@ -59,7 +63,8 @@
 
         <service
             android:name="com.example.firebase.CloudMessaging_Firebase"
-            android:exported="false">
+            android:exported="false"
+            tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

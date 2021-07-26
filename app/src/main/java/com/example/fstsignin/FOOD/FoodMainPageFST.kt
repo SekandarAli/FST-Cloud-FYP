@@ -187,7 +187,6 @@ class FoodMainPageFST : AppCompatActivity() {
             )
         )
 
-
         // layoutManager = LinearLayoutManager(this)
 
 //        hdisplayList.addAll(hitems)

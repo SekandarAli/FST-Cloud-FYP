@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.3"
+        android:gravity="center"
+        >
+
+    <ImageView
+        android:id="@+id/imageViewUpload"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/signinlogo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_weight="0.7"
+        >
+
+        <Button
+            android:id="@+id/chooseImage"
+            style="@style/buttonsign"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/button"
+            android:text="Choose Image"></Button>
+
+
+        <Button
+            android:id="@+id/uploadimage"
+            style="@style/buttonsign"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="uploadimage"></Button>
+
+
+
+        <Button
+            android:id="@+id/showimages"
+            style="@style/buttonsign"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="showimages"></Button>
+
+
+        <Button
+            android:id="@+id/back_upload"
+            style="@style/buttonsign"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="back"></Button>
+
+
+
+    </LinearLayout>
+</LinearLayout>

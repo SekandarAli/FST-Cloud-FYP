@@ -1,6 +1,5 @@
 package com.example.fstsignin.SIGN_IN
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
@@ -10,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.Start_Pages.FSTForgetpassword
 import com.example.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
+import com.example.fstsignin.Vendor.Vendor_Main_Page
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -56,65 +56,70 @@ class FST_Vendor_Signin : AppCompatActivity() {
 
         vendor_login.setOnClickListener(View.OnClickListener {
 
-            var pd = ProgressDialog(this)
-            pd.setTitle("SignIp in progress...")
-            pd.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-            pd.setProgress(0)
-            pd.setMax(100)
+
+            intent = Intent(this,Vendor_Main_Page::class.java)
+            startActivity(intent)
 
 
+//            var pd = ProgressDialog(this)
+//            pd.setTitle("SignIp in progress...")
+//            pd.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+//            pd.setProgress(0)
+//            pd.setMax(100)
 //
-//    val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-//    inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
-
-            if (vendor_signinemail.text.isNullOrEmpty()) {
-                vendor_signinemail?.error ="Email cannot be empty."
-                vendor_signinemail.isFocusable
-            }
-
-            else if (vendor_signinpassword?.text.isNullOrEmpty()) {
-                vendor_signinpassword?.error ="Password cannot be empty."
-                vendor_signinpassword.isFocusable
-
-            }
-
 //
-//    else if (signinpassword?.text.length < 4) {
-//        signinpassword?.error ="Password must contain more than 3 words."
-//        signinpassword.isFocusable
+////
+////    val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+////    inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
 //
-//    }
-
-
-            else if (vendor_signinemail.text.isEmpty() && vendor_signinpassword.text.isEmpty()) {
-                vendor_signinpassword?.error ="Empty."
-                vendor_signinemail?.error ="Empty."
-                vendor_signinemail.isFocusable
-            }
-
-            else if (vendor_signinemail.text.isNotEmpty() && vendor_signinpassword.text.isNotEmpty()) {
-
-                pd.show()
-
-                auth.signInWithEmailAndPassword(
-                    vendor_signinemail.text.toString(),
-                    vendor_signinpassword.text.toString()
-                )
-                    .addOnCompleteListener(this) { task ->
-                        if (task.isSuccessful) {
-
-                            val user = auth.currentUser
-                            updateUI(user,vendor_signinemail.text.toString())
-
-                        }
-                        else
-
-                            Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
-                    }
-                pd.dismiss()
-
-
-            }
+//            if (vendor_signinemail.text.isNullOrEmpty()) {
+//                vendor_signinemail?.error ="Email cannot be empty."
+//                vendor_signinemail.isFocusable
+//            }
+//
+//            else if (vendor_signinpassword?.text.isNullOrEmpty()) {
+//                vendor_signinpassword?.error ="Password cannot be empty."
+//                vendor_signinpassword.isFocusable
+//
+//            }
+//
+////
+////    else if (signinpassword?.text.length < 4) {
+////        signinpassword?.error ="Password must contain more than 3 words."
+////        signinpassword.isFocusable
+////
+////    }
+//
+//
+//            else if (vendor_signinemail.text.isEmpty() && vendor_signinpassword.text.isEmpty()) {
+//                vendor_signinpassword?.error ="Empty."
+//                vendor_signinemail?.error ="Empty."
+//                vendor_signinemail.isFocusable
+//            }
+//
+//            else if (vendor_signinemail.text.isNotEmpty() && vendor_signinpassword.text.isNotEmpty()) {
+//
+//                pd.show()
+//
+//                auth.signInWithEmailAndPassword(
+//                    vendor_signinemail.text.toString(),
+//                    vendor_signinpassword.text.toString()
+//                )
+//                    .addOnCompleteListener(this) { task ->
+//                        if (task.isSuccessful) {
+//
+//                            val user = auth.currentUser
+//                            updateUI(user,vendor_signinemail.text.toString())
+//
+//                        }
+//                        else
+//
+//                            Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
+//                    }
+//                pd.dismiss()
+//
+//
+//            }
 
 
 

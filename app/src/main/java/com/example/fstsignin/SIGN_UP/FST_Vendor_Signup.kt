@@ -33,7 +33,6 @@ class FST_Vendor_Signup : AppCompatActivity() {
         supportActionBar?.hide()
 
         val vendor_signup : Button = findViewById(R.id.vendor_Signup)
-        val vendor_Location : Button = findViewById(R.id.vendor_Location)
         val vendor_Email : EditText = findViewById(R.id.vendor_Email)
         val vendor_Restaurant : EditText = findViewById(R.id.vendorRestaurant)
         val vendorUsername : EditText = findViewById(R.id.vendorUsername)
@@ -56,14 +55,6 @@ class FST_Vendor_Signup : AppCompatActivity() {
 
             //s.solidColor(from("#FFFFF"))
         }
-
-        vendor_Location.setOnClickListener {
-
-            intent = Intent(this, Map_location::class.java)
-            startActivity(intent)
-        }
-
-
 
 
         vendor_Password.setOnClickListener {

@@ -92,7 +92,7 @@
             android:drawablePadding="10dp"
             android:hint="Enter Restaurant Name"
             android:singleLine="true"
-            android:drawableRight="@drawable/ic_user" />
+            android:drawableRight="@drawable/ic_food" />
 
         <EditText
 
@@ -144,14 +144,26 @@
             android:singleLine="true"
             ></EditText>
 
+  <EditText
 
-        <Button
-            style="@style/vendor_Location"
-            android:text="Select location"
+            style="@style/editTextsignup"
             android:layout_marginTop="10dp"
-            android:background="@drawable/button"
-            android:id="@+id/vendor_Location"
-            ></Button>
+            android:hint="Enter few words about your restaurant"
+            android:background="@drawable/logo"
+            android:inputType="textPassword"
+            android:drawableRight="@drawable/ic_description"
+            android:id="@+id/vendor_about_resturant"
+            android:singleLine="true"
+            ></EditText>
+
+
+<!--        <Button-->
+<!--            style="@style/vendor_Location"-->
+<!--            android:text="Select location"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:id="@+id/vendor_Location"-->
+<!--            ></Button>-->
 
         <Button
             style="@style/buttonsign"
