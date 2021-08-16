@@ -21,14 +21,13 @@
         >
 
 
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/signinlogo"
-                ></ImageView>
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/signinlogo"
+            android:id="@+id/img_vendorAddData_imageview" />
 
 
 
@@ -47,38 +46,38 @@
         >
 
 
-        <TextView
-            android:id="@+id/tv1"
-            style="@style/heading"
+        <Button
+            android:id="@+id/btn_vendor_addData_chooseimaeg"
+            style="@style/buttonsign"
             android:layout_gravity="center"
-            android:textSize="20sp"
-            android:text="Add data of your dish" />
+            android:textSize="10sp"
+            android:text="choose image" />
 
         <EditText
 
             style="@style/editTextsignin"
             android:layout_marginTop="30dp"
-            android:hint="Enter Food Name"
+            android:hint="Enter Restaurant Name"
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_food"
             android:drawablePadding="20sp"
-            android:id="@+id/vendor_food_name"
+            android:id="@+id/ed_vendorAddData_Restaurant_name"
             android:layout_height="55dp"
-            android:singleLine="true"
-            ></EditText>
+            android:singleLine="true" />
 
 
         <EditText
 
-            android:id="@+id/vendor_food_description"
+            android:id="@+id/ed_vendorAddData_restaurant_contact"
             style="@style/editTextsignin"
             android:layout_marginTop="10dp"
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_description"
-            android:hint="Enter Food Description"
+            android:hint="Enter Contact No"
             android:layout_height="50dp"
             android:singleLine="true"
-            android:inputType="text"></EditText>
+            android:inputType="text" />
+
 
 
         <LinearLayout
@@ -91,28 +90,21 @@
             >
 
             <Button
-                android:id="@+id/vendor_add_data"
+                android:id="@+id/btn_vendor_add_data"
                 style="@style/buttonsign"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/button"
-                android:text="Add data"></Button>
+                android:text="Add data" />
 
             <Button
-            style="@style/buttonsign"
-            android:text="Show data"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button"
-            android:id="@+id/vendor_show_data"
-            ></Button>
+                style="@style/buttonsign"
+                android:text="Show data"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:id="@+id/vendor_show_data" />
 
-        <Button
-            style="@style/buttonsign"
-            android:text="Upload food picture"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button"
-            android:textSize="7dp"
-            android:id="@+id/vendor_upload_pic"
-            ></Button>
+
+
 
 
 

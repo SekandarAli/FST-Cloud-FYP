@@ -30,14 +30,7 @@ class Vendor_Adapter(var items : ArrayList<Vendor_Model>,context : Context) : Re
         }
 
         override fun onBindViewHolder(holder: Vendor_Adapter.ViewHolder, position: Int) {
-            holder.itemName.text = items[position].name
-            holder.itemImage.setImageResource(items[position].image)
 
-            holder.itemView.setOnClickListener{
-
-                var intent = Intent(context,Vendor_Add_Data::class.java)
-                startActivity(context,intent,null)
-            }
         }
 
 
