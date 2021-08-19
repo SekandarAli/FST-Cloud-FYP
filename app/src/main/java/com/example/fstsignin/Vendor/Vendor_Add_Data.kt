@@ -28,12 +28,13 @@ class Vendor_Add_Data : AppCompatActivity() {
     var reference : DatabaseReference? = null
     lateinit var imageView : ImageView
     lateinit var mAuth : FirebaseAuth
-    lateinit var Restaurant_name : EditText
-    lateinit var Restaurant_contact : EditText
+    lateinit var dish_name : EditText
+    lateinit var dish_description : EditText
+    lateinit var dish_price : EditText
     lateinit  var btn_chooseImage : Button
 
 //Strings and constant
-    var image : String = ""
+
     var  location : String = ""
     var  PICK_IMAGE_REQUEST = 22
 
@@ -51,8 +52,9 @@ class Vendor_Add_Data : AppCompatActivity() {
         val add_data : Button = findViewById(R.id.btn_vendor_add_data)
         val show_data : Button = findViewById(R.id.vendor_show_data)
          btn_chooseImage = findViewById(R.id.btn_vendor_addData_chooseimaeg)
-       Restaurant_name = findViewById(R.id.ed_vendorAddData_Restaurant_name)
-       Restaurant_contact = findViewById(R.id.ed_vendorAddData_restaurant_contact)
+       dish_name = findViewById(R.id.ed_vendorAddData_dish_name)
+       dish_price = findViewById(R.id.ed_vendorAddData_dish_price)
+       dish_description = findViewById(R.id.ed_vendorAddData_dish_description)
         imageView = findViewById(R.id.img_vendorAddData_imageview)
 
         //Firebase Storage Initialization
@@ -63,7 +65,10 @@ class Vendor_Add_Data : AppCompatActivity() {
 mAuth = FirebaseAuth.getInstance()
 btn_chooseImage.setOnClickListener {chooseImage()}
 
-        show_data.setOnClickListener {}
+        show_data.setOnClickListener {
+            var intent = Intent(this,Vendor_Show_Data::class.java)
+        startActivity(intent)
+        }
 
         add_data.setOnClickListener { Add_Data() }
     }
@@ -74,17 +79,17 @@ btn_chooseImage.setOnClickListener {chooseImage()}
 
         //Real Time data base Initialization code
         root_Node = FirebaseDatabase.getInstance()
-        reference = root_Node!!.getReference("Restaurant")
+        reference = root_Node!!.getReference("Dish")
 
-        var name = Restaurant_name.text.toString()
-        var contact = Restaurant_contact.text.toString()
-        Restaurant_name.setText("")
-        Restaurant_contact.setText("")
-        imageView
+        var dish_name = dish_name.text.toString()
+        var dish_description = dish_description.text.toString()
+        var dish_price = dish_price.text.toString()
+
+
 
 
         // Only Image Uploading to cloud storage Code
-        val ref: StorageReference = Storageref.child("Restaurant/" + UUID.randomUUID().toString())
+        val ref: StorageReference = Storageref.child("Dish/" + UUID.randomUUID().toString())
         var uploadTask =  ref.putFile(filepath)
         val urlTask = uploadTask?.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
             if (!task.isSuccessful) {
@@ -99,9 +104,9 @@ btn_chooseImage.setOnClickListener {chooseImage()}
                 Toast.makeText(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show()
                 val downloadUri = task.result
 
-                var image = downloadUri.toString()
-                var model  = Vendor_Model(name, image, location, contact)
-                reference!!.child(name).setValue(model).addOnCompleteListener {
+                var dish_image = downloadUri.toString()
+                var model  = Vendor_Model(dish_name,dish_image,dish_description,dish_price)
+                reference!!.child(dish_name).setValue(model).addOnCompleteListener {
                     Toast.makeText(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT).show()}.addOnFailureListener{ Toast.makeText(this, "Something went wrong, Check Connection", Toast.LENGTH_LONG).show()}
 
 
@@ -156,40 +161,8 @@ btn_chooseImage.setOnClickListener {chooseImage()}
 
         }}
 
-    private fun uploadImage() {
-
-        val ref: StorageReference = Storageref.child("Restaurant/" + UUID.randomUUID().toString())
-        var uploadTask =  ref.putFile(filepath)
-        val urlTask = uploadTask?.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->
-            if (!task.isSuccessful) {
-
-                task.exception?.let {
-                    throw it
-                }
-            }
-            return@Continuation ref.downloadUrl
-        })?.addOnCompleteListener { task ->
-            if (task.isSuccessful) {
-                Toast.makeText(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show()
-                val downloadUri = task.result
 
 
-
-
-
-            } else {
-                // Handle failures
-                Toast.makeText(this, "Something Went wrong, try again", Toast.LENGTH_SHORT).show()
-            }
-        }?.addOnFailureListener{
-
-        }
-
-    }
-    private fun addUploadRecordToDb(uri: String) : String{
-        var image  = uri
-        return image
-    }
 
 
 

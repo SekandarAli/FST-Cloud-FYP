@@ -57,23 +57,35 @@
 
             style="@style/editTextsignin"
             android:layout_marginTop="30dp"
-            android:hint="Enter Restaurant Name"
+            android:hint="Enter dish Name"
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_food"
             android:drawablePadding="20sp"
-            android:id="@+id/ed_vendorAddData_Restaurant_name"
+            android:id="@+id/ed_vendorAddData_dish_name"
             android:layout_height="55dp"
             android:singleLine="true" />
 
 
         <EditText
 
-            android:id="@+id/ed_vendorAddData_restaurant_contact"
+            android:id="@+id/ed_vendorAddData_dish_price"
             style="@style/editTextsignin"
             android:layout_marginTop="10dp"
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_description"
-            android:hint="Enter Contact No"
+            android:hint="Enter Price"
+            android:layout_height="50dp"
+            android:singleLine="true"
+            android:inputType="text" />
+
+        <EditText
+
+            android:id="@+id/ed_vendorAddData_dish_description"
+            style="@style/editTextsignin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logo"
+            android:drawableRight="@drawable/ic_description"
+            android:hint="Enter food description"
             android:layout_height="50dp"
             android:singleLine="true"
             android:inputType="text" />

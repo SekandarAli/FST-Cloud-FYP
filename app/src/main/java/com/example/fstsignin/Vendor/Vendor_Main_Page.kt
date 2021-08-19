@@ -2,25 +2,22 @@ package com.example.fstsignin.Vendor
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.SearchView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
-import java.util.*
+//import com.example.fstsignin.Vendor_Adapter
 import kotlin.collections.ArrayList
 
 class Vendor_Main_Page : AppCompatActivity() {
 
-    var items = ArrayList<Vendor_Model>()
-    var displayList = ArrayList<Vendor_Model>()
+//    var items = ArrayList<Vendor_Model>()
+//    var displayList = ArrayList<Vendor_Model>()
 
     lateinit var recycleView: RecyclerView
 
     private var layoutManager: RecyclerView.LayoutManager? = null
-    private var adapter: RecyclerView.Adapter<Vendor_Adapter.ViewHolder>? = null
+   // private var adapter: RecyclerView.Adapter<Vendor_Adapter.ViewHolder>? = null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +27,7 @@ class Vendor_Main_Page : AppCompatActivity() {
 
             recycleView = findViewById(R.id.recycleView)
 
-            displayList.addAll(items)
+          //  displayList.addAll(items)
 
 
             layoutManager = LinearLayoutManager(this)
@@ -38,8 +35,8 @@ class Vendor_Main_Page : AppCompatActivity() {
 
             recycleView.layoutManager = GridLayoutManager(this,1)
 
-            adapter = Vendor_Adapter(displayList,this)
-            recycleView.adapter = adapter
+         //   adapter = Vendor_Adapter(displayList,this)
+                //  recycleView.adapter = adapter
 
 
         }

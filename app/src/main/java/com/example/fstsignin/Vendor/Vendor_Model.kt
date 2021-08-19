@@ -2,19 +2,18 @@ package com.example.fstsignin.Vendor
 
 class Vendor_Model {
 
-        lateinit var name : String
-        lateinit var image : String
-        lateinit var location : String
-        lateinit var contact : String
+     var dish_name : String = ""
+     var dish_image : String = ""
+     var dish_price : String = ""
+     var dish_description : String = ""
 
 
-constructor(){}
-        constructor(Name : String,image : String, Location : String, Contact : String)
-        {
-            this.name = Name
-            this.image = image
-            this.location = Location
-            this.contact = Contact
-        }
-
+    constructor(){}
+    constructor(Name : String,image : String, Description : String, price : String)
+    {
+        this.dish_name = Name
+        this.dish_image = image
+        this.dish_description = Description
+        this.dish_price = price
     }
+}

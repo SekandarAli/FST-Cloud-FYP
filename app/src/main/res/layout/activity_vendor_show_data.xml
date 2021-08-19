@@ -34,22 +34,11 @@
 
         </TextView>
 
-        <ScrollView
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-
-            <TextView
-                android:id="@+id/show_tv_data"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/black"
-                android:layout_marginTop="15dp"
-                android:textSize="22sp"></TextView>
-        </ScrollView>
+       <androidx.recyclerview.widget.RecyclerView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:id="@+id/showdata_recycleview"
+           />
 
     </LinearLayout>
 
@@ -62,13 +51,7 @@
         android:layout_weight="0.9"
         >
 
-        <Button
-            android:id="@+id/vendor_add_back"
-            style="@style/buttonsign"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="@drawable/button"
-            android:text="Back"></Button>
+
 
 
     </LinearLayout>
