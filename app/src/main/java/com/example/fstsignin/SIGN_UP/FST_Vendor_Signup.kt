@@ -34,7 +34,7 @@ class FST_Vendor_Signup : AppCompatActivity() {
 
         val vendor_signup : Button = findViewById(R.id.vendor_Signup)
         val vendor_Email : EditText = findViewById(R.id.vendor_Email)
-        val vendor_Restaurant : EditText = findViewById(R.id.vendorRestaurant)
+        //val vendor_Restaurant : EditText = findViewById(R.id.vendorRestaurant)
         val vendorUsername : EditText = findViewById(R.id.vendorUsername)
         val vendor_Phoneno : EditText = findViewById(R.id.vendor_Phoneno)
         val vendor_Password : EditText = findViewById(R.id.vendor_Password)
@@ -88,11 +88,7 @@ class FST_Vendor_Signup : AppCompatActivity() {
                 vendor_Email?.error = "Email cannot be empty."
                 vendor_Email.isFocusable
             }
-                if (vendor_Restaurant.text.isNullOrEmpty()) {
-                vendor_Restaurant?.error = "Email cannot be empty."
-                vendor_Restaurant.isFocusable
-
-            } else if (vendor_Password?.text.isNullOrEmpty()) {
+                 else if (vendor_Password?.text.isNullOrEmpty()) {
                 vendor_Password?.error = "Password cannot be empty."
                 vendor_Password.isFocusable
 
@@ -114,11 +110,10 @@ class FST_Vendor_Signup : AppCompatActivity() {
 
             } else if (vendor_Email.text.isEmpty() && vendor_Password.text.isEmpty() &&
                 vendor_Repassword.text.isEmpty() && vendorUsername.text.isEmpty() &&
-                vendor_Phoneno.text.isEmpty()&& vendor_Restaurant.text.isEmpty()
+                vendor_Phoneno.text.isEmpty()
 
             ) {
                 vendorUsername?.error = "Empty"
-                vendor_Restaurant?.error = "Empty"
                 vendor_Email?.error = "Empty"
                 vendor_Password?.error = "Empty"
                 vendor_Repassword?.error = "Empty"
@@ -158,7 +153,6 @@ class FST_Vendor_Signup : AppCompatActivity() {
                                         val vendor_users: MutableMap<String, Any> = HashMap()
 
                                         vendor_users["UserName"] = vendorUsername.text.toString()
-                                        vendor_users["RestaurantName"] = vendor_Restaurant.text.toString()
                                         vendor_users["Email"] = vendor_Email.text.toString()
                                         vendor_users["PhoneNo"] = vendor_Phoneno.text.toString()
                                         vendor_users["Password"] = vendor_Password.text.toString()

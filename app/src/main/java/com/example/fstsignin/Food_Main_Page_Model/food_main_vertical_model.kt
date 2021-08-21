@@ -1,4 +1,4 @@
-package com.example.fstsignin.Main_Model
+package com.example.fstsignin.Food_Main_Page_Model
 
 class food_main_vertical_model {
 

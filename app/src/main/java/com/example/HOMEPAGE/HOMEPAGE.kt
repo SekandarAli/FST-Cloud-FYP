@@ -75,7 +75,7 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
         // LoginFragment is the name of Fragment and the Login
         // is a title of tab
-        adapter.addFragment(FoodFragment(this), "Food")
+        adapter.addFragment(FoodFragment(this), "Restaurant")
         adapter.addFragment(ShopFragment(this), "Shop")
         adapter.addFragment(TravelFragment(this), "Travel")
 

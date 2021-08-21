@@ -42,6 +42,22 @@
     </group>
 
 
+    <group
+        android:id="@+id/group3"
+        >
+
+                <item
+                    android:id="@+id/Support"
+                    android:icon="@mipmap/outline_logout_black_18"
+                    android:title="Support/FAQs"
+                    android:menuCategory="system"/>
+
+
+
+
+    </group>
+
+
 
 
 </menu>

@@ -20,11 +20,13 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name=".Vendor.Vendor_Show_Image"></activity>
-        <activity android:name=".Vendor.Vendor_Add_picture" />
-        <activity android:name=".Vendor.Vendor_Show_Data" />
-        <activity android:name=".Vendor.Vendor_Add_Data" />
-        <activity android:name=".Vendor.Vendor_Main_Page" />
+        <activity android:name=".Vendor.Vendor_Main_Page"></activity>
+        <activity android:name=".Start_Pages.Animated_Splash_Screen" />
+        <activity android:name=".Vendor_Dish.showdata_adapter" /> <!-- <activity android:name=".Vendor.Vendor_Main_Page"></activity> -->
+        <!-- <activity android:name=".Vendor.Vendor_Show_Image" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Add_picture" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Show_Data" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Add_Data" /> -->
         <activity android:name=".Start_Pages.OTP" />
         <activity android:name=".SIGN_IN.FST_Vendor_Signin" />
         <activity android:name=".SIGN_UP.FST_Vendor_Signup" />
@@ -50,6 +52,13 @@
         <activity android:name=".Start_Pages.FSTForgetpage2" />
         <activity android:name=".FOOD.FoodDetailsFST" />
         <activity android:name=".Start_Pages.FSTForgetpassword" />
+        <activity android:name=".Vendor_Resturant.Vendor_Resturant_Add_Data" />
+        <activity android:name=".Vendor_Dish.Vendor_Dish_Add_Data" />
+        <activity android:name=".Vendor_Dish.Vendor_Dish_Show_Data" />
+        <activity android:name=".Vendor_Resturant.Vendor_Restaurant_Show_Data" />
+        <activity android:name=".Vendor.Vendor_Main_Page"
+            tools:ignore="DuplicateActivity" />
+
         <activity android:name=".Start_Pages.Logo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -59,6 +68,9 @@
         </activity>
         <activity android:name=".SIGN_UP.FSTSignUp" />
         <activity android:name=".SIGN_IN.FSTSignIn" />
+        <activity
+            android:name=".SIGN_IN.FST_Vendor_Signin"
+            tools:ignore="DuplicateActivity" />
         <activity android:name=".Start_Pages.FSTRegisterPage" />
 
         <service

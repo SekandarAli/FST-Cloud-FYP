@@ -14,24 +14,20 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="0.8"
+        android:layout_weight="1"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
         >
 
 
-
-            <ImageView
-                android:layout_width="250dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/signinlogo"
-                ></ImageView>
-
-
-
+        <ImageView
+            android:id="@+id/vendor_image"
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/signinlogo"></ImageView>
 
 
     </LinearLayout>
@@ -54,11 +50,23 @@
             android:textSize="20sp"
             android:text="Add data of your dish" />
 
-        <EditText
+        <Button
 
             style="@style/editTextsignin"
             android:layout_marginTop="30dp"
+            android:hint="Choose Image"
+            android:background="@drawable/logo"
+            android:drawableRight="@drawable/ic_food"
+            android:drawablePadding="20sp"
+            android:id="@+id/vendor_choose_image"
+            android:layout_height="55dp"
+            ></Button>
+
+        <EditText
+
+            style="@style/editTextsignin"
             android:hint="Enter Food Name"
+            android:layout_marginTop="10dp"
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_food"
             android:drawablePadding="20sp"
@@ -76,6 +84,19 @@
             android:background="@drawable/logo"
             android:drawableRight="@drawable/ic_description"
             android:hint="Enter Food Description"
+            android:layout_height="50dp"
+            android:singleLine="true"
+            android:inputType="text"></EditText>
+
+
+        <EditText
+
+            android:id="@+id/vendor_food_price"
+            style="@style/editTextsignin"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logo"
+            android:drawableRight="@drawable/ic_price"
+            android:hint="Enter Food Price"
             android:layout_height="50dp"
             android:singleLine="true"
             android:inputType="text"></EditText>
@@ -107,11 +128,10 @@
 
         <Button
             style="@style/buttonsign"
-            android:text="Upload food picture"
+            android:text="Back"
             android:layout_marginTop="20dp"
             android:background="@drawable/button"
-            android:textSize="7dp"
-            android:id="@+id/vendor_upload_pic"
+            android:id="@+id/vendor_dish_back"
             ></Button>
 
 

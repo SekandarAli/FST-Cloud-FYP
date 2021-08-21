@@ -1,4 +1,4 @@
-package com.example.fstsignin.Main_Adapter
+package com.example.fstsignin.Food_Main_Page_Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.FOOD.FoodDetailsFST
 import com.example.fstsignin.R
-import com.example.fstsignin.Main_Model.food_main_vertical_model
+import com.example.fstsignin.Food_Main_Page_Model.food_main_vertical_model
 
 class food_main_vertical_adapter (var items : ArrayList<food_main_vertical_model>, context
                 : Context) : RecyclerView.Adapter<food_main_vertical_adapter.ViewHolder>() {

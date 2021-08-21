@@ -10,6 +10,7 @@ import com.example.fstsignin.Start_Pages.FSTForgetpassword
 import com.example.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
 import com.example.fstsignin.Vendor.Vendor_Main_Page
+import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
@@ -54,11 +55,13 @@ class FST_Vendor_Signin : AppCompatActivity() {
 
 
 
-        vendor_login.setOnClickListener(View.OnClickListener {
+        vendor_login.setOnClickListener{
 
 
-            intent = Intent(this,Vendor_Main_Page::class.java)
+            intent = Intent(this, Vendor_Main_Page :: class.java)
             startActivity(intent)
+
+
 
 
 //            var pd = ProgressDialog(this)
@@ -123,7 +126,7 @@ class FST_Vendor_Signin : AppCompatActivity() {
 
 
 
-        })
+        }
 
 
         vendor_forgetpassword.setOnClickListener(View.OnClickListener {

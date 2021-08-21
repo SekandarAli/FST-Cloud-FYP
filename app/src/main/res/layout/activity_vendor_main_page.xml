@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/background"
+    android:layout_height="match_parent"
+    android:background="@color/logo"
     android:orientation="vertical"
-    android:layout_height="match_parent">
-
-    <androidx.appcompat.widget.Toolbar
-
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/logo"
-        android:minHeight="?attr/actionBarSize"
-        app:title="Admin Panel"
-        app:titleTextColor="@color/white"
-        app:menu="@menu/menu"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:src="@drawable/signinlogo"
-        android:layout_weight="0.5"
-        android:layout_marginTop="10dp"
-
-        ></ImageView>
+    tools:context=".Start_Pages.FSTRegisterPage">
 
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:textColor="@color/logo"
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
         android:gravity="center"
-        android:text="Click to add description"
-        android:layout_marginTop="10dp"
-        android:id="@+id/text">
-
-    </TextView>
+        android:orientation="vertical">
 
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/logoo"
+            android:src="@drawable/logo"></de.hdodenhof.circleimageview.CircleImageView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycleView"
-        android:layout_weight="0.35"
-        >
 
-    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/vendor_add_resturant"
+            style="@style/buttonregister"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button"
+            android:text="Add Resturant"></Button>
+
+
+        <Button
+            android:id="@+id/vendor_add_dish"
+            style="@style/buttonregister"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button"
+            android:text="Add Dish"></Button>
+
+
+    </LinearLayout>
+
 
 </LinearLayout>

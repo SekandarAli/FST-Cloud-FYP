@@ -13,12 +13,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.HOMEPAGE.HOMEPAGE
 import com.example.MAPS.Map_location
 import com.example.fstsignin.*
-import com.example.fstsignin.Main_Adapter.food_main_horizontal_card_adapter
-import com.example.fstsignin.Main_Adapter.food_main_horizontal_list_adapter
-import com.example.fstsignin.Main_Adapter.food_main_vertical_adapter
-import com.example.fstsignin.Main_Model.food_main_horizontal_card_model
-import com.example.fstsignin.Main_Model.food_main_horizontal_list_model
-import com.example.fstsignin.Main_Model.food_main_vertical_model
+import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_card_adapter
+import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_list_adapter
+import com.example.fstsignin.Food_Main_Page_Adapter.food_main_vertical_adapter
+import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_card_model
+import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_list_model
+import com.example.fstsignin.Food_Main_Page_Model.food_main_vertical_model
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -196,6 +196,16 @@ class FoodMainPageFST : AppCompatActivity() {
         hadapter = food_main_horizontal_card_adapter(hitems, this)
 
         recycleViewcard.adapter = hadapter
+
+
+
+
+
+        //vertical food main page adapter
+
+
+
+
 
 
 

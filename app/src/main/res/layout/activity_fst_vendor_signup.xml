@@ -62,7 +62,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:gravity="top"
-        android:layout_weight="0.5"
+        android:layout_weight="0.6"
         >
 
 
@@ -83,16 +83,16 @@
             android:singleLine="true"
             android:drawableRight="@drawable/ic_user" />
 
-        <EditText
+<!--        <EditText-->
 
-            android:id="@+id/vendorRestaurant"
-            style="@style/editTextsignup"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/logo"
-            android:drawablePadding="10dp"
-            android:hint="Enter Restaurant Name"
-            android:singleLine="true"
-            android:drawableRight="@drawable/ic_food" />
+<!--            android:id="@+id/vendorRestaurant"-->
+<!--            style="@style/editTextsignup"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/logo"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:hint="Enter Restaurant Name"-->
+<!--            android:singleLine="true"-->
+<!--            android:drawableRight="@drawable/ic_food" />-->
 
         <EditText
 
@@ -144,17 +144,17 @@
             android:singleLine="true"
             ></EditText>
 
-  <EditText
+<!--  <EditText-->
 
-            style="@style/editTextsignup"
-            android:layout_marginTop="10dp"
-            android:hint="Enter few words about your restaurant"
-            android:background="@drawable/logo"
-            android:inputType="textPassword"
-            android:drawableRight="@drawable/ic_description"
-            android:id="@+id/vendor_about_resturant"
-            android:singleLine="true"
-            ></EditText>
+<!--            style="@style/editTextsignup"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:hint="Enter few words about your restaurant"-->
+<!--            android:background="@drawable/logo"-->
+<!--            android:inputType="textPassword"-->
+<!--            android:drawableRight="@drawable/ic_description"-->
+<!--            android:id="@+id/vendor_about_resturant"-->
+<!--            android:singleLine="true"-->
+<!--            ></EditText>-->
 
 
 <!--        <Button-->
