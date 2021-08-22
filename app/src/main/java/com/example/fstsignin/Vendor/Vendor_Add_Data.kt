@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.widget.*
+import com.example.Search.Search_data
 import com.example.fstsignin.R
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
@@ -51,6 +52,7 @@ class Vendor_Add_Data : AppCompatActivity() {
 
         val add_data : Button = findViewById(R.id.btn_vendor_add_data)
         val show_data : Button = findViewById(R.id.vendor_show_data)
+        val search_data : Button = findViewById(R.id.vendor_search_data)
          btn_chooseImage = findViewById(R.id.btn_vendor_addData_chooseimaeg)
        dish_name = findViewById(R.id.ed_vendorAddData_dish_name)
        dish_price = findViewById(R.id.ed_vendorAddData_dish_price)
@@ -63,15 +65,15 @@ class Vendor_Add_Data : AppCompatActivity() {
 
 
 mAuth = FirebaseAuth.getInstance()
+        search_data.setOnClickListener {var intent = Intent(this,Search_data::class.java)
+            startActivity(intent) }
 btn_chooseImage.setOnClickListener {chooseImage()}
 
-        show_data.setOnClickListener {
+        show_data.setOnClickListener{
             var intent = Intent(this,Vendor_Show_Data::class.java)
-        startActivity(intent)
-        }
+        startActivity(intent) }
 
-        add_data.setOnClickListener { Add_Data() }
-    }
+        add_data.setOnClickListener { Add_Data() } }
 
 
 
@@ -106,7 +108,7 @@ btn_chooseImage.setOnClickListener {chooseImage()}
 
                 var dish_image = downloadUri.toString()
                 var model  = Vendor_Model(dish_name,dish_image,dish_description,dish_price)
-                reference!!.child(dish_name).setValue(model).addOnCompleteListener {
+                reference!!.child(dish_price).setValue(model).addOnCompleteListener {
                     Toast.makeText(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT).show()}.addOnFailureListener{ Toast.makeText(this, "Something went wrong, Check Connection", Toast.LENGTH_LONG).show()}
 
 
