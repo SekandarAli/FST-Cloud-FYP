@@ -20,23 +20,21 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name="com.example.temp_Practise"
-            android:exported="true" >
-
-        </activity>
+        <activity android:name="com.example.Search.Search_data"></activity>
+        <activity
+            android:name="com.example.temp_Practise"
+            android:exported="true"></activity>
         <activity android:name=".Vendor.Vendor_Show_Image" />
         <activity android:name=".Vendor.Vendor_Add_picture" />
         <activity android:name=".Vendor.Vendor_Show_Data" />
         <activity
             android:name=".Vendor.Vendor_Add_Data"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".Vendor.Vendor_Main_Page" />
         <activity android:name=".Start_Pages.OTP" />
@@ -64,7 +62,7 @@
         <activity android:name=".Start_Pages.FSTForgetpage2" />
         <activity android:name=".FOOD.FoodDetailsFST" />
         <activity android:name=".Start_Pages.FSTForgetpassword" />
-        <activity android:name=".Start_Pages.Logo"></activity>
+        <activity android:name=".Start_Pages.Logo" />
         <activity android:name=".SIGN_UP.FSTSignUp" />
         <activity android:name=".SIGN_IN.FSTSignIn" />
         <activity android:name=".Start_Pages.FSTRegisterPage" />
