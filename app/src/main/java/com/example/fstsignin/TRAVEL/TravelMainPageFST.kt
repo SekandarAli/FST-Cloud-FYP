@@ -7,8 +7,8 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.HOMEPAGE.HOMEPAGE
-import com.example.MAPS.Map_location
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.*
 import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_card_adapter
 import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_list_adapter
@@ -16,6 +16,7 @@ import com.example.fstsignin.Food_Main_Page_Adapter.food_main_vertical_adapter
 import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_card_model
 import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_list_model
 import com.example.fstsignin.Food_Main_Page_Model.food_main_vertical_model
+import com.example.fstsignin.SEARCH.Searching
 
 class TravelMainPageFST : AppCompatActivity() {
 
@@ -34,6 +35,7 @@ class TravelMainPageFST : AppCompatActivity() {
 
         val back : ImageView = findViewById(R.id.back)
         val location : ImageView = findViewById(R.id.location)
+        val travel_search : ImageView = findViewById(R.id.travel_search)
 
         back.setOnClickListener{
             intent = Intent(this, HOMEPAGE::class.java)
@@ -45,6 +47,12 @@ class TravelMainPageFST : AppCompatActivity() {
             intent = Intent(this, Map_location::class.java)
             startActivity(intent)
         }
+
+        travel_search.setOnClickListener{
+            intent = Intent(this, Searching::class.java)
+            startActivity(intent)
+        }
+
 
         val items = ArrayList<food_main_horizontal_list_model>()
 

@@ -1,4 +1,4 @@
-package com.example.Firebase
+package com.example.fstsignin.FIREBASE
 
 import android.app.NotificationManager
 import android.content.Context

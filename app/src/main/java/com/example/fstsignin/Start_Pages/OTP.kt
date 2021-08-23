@@ -6,9 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
-import com.example.fstsignin.SIGN_UP.FST_Vendor_Signup
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException

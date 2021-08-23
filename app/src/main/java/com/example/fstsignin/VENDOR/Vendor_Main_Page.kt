@@ -1,14 +1,11 @@
-package com.example.fstsignin.Vendor
+package com.example.fstsignin.VENDOR
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.ImageView
 import com.example.fstsignin.R
-import com.example.fstsignin.SIGN_IN.FSTSignIn
-import com.example.fstsignin.SIGN_UP.FSTSignUp
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Add_Data
 import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
 

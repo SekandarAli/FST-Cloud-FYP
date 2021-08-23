@@ -10,8 +10,8 @@ import android.widget.SearchView
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.HOMEPAGE.HOMEPAGE
-import com.example.MAPS.Map_location
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.*
 import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_card_adapter
 import com.example.fstsignin.Food_Main_Page_Adapter.food_main_horizontal_list_adapter
@@ -19,6 +19,7 @@ import com.example.fstsignin.Food_Main_Page_Adapter.food_main_vertical_adapter
 import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_card_model
 import com.example.fstsignin.Food_Main_Page_Model.food_main_horizontal_list_model
 import com.example.fstsignin.Food_Main_Page_Model.food_main_vertical_model
+import com.example.fstsignin.SEARCH.Searching
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -58,6 +59,7 @@ class FoodMainPageFST : AppCompatActivity() {
 
         val back : ImageView = findViewById(R.id.back)
         val location : ImageView = findViewById(R.id.location)
+        val food_search : ImageView = findViewById(R.id.food_search)
 
         back.setOnClickListener{
             intent = Intent(this, HOMEPAGE::class.java)
@@ -67,6 +69,11 @@ class FoodMainPageFST : AppCompatActivity() {
 
         location.setOnClickListener{
             intent = Intent(this, Map_location::class.java)
+            startActivity(intent)
+        }
+
+        food_search.setOnClickListener{
+            intent = Intent(this, Searching::class.java)
             startActivity(intent)
         }
 

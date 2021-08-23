@@ -3,11 +3,13 @@ package com.example.fstsignin.Vendor_Dish
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
+import com.example.fstsignin.SEARCH.Searching
 import com.google.firebase.database.*
 
 class Vendor_Dish_Show_Data : AppCompatActivity() {
@@ -16,6 +18,7 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var DishRecycleview : RecyclerView
     private lateinit var DishArrayList : ArrayList<Vendor_Dish_Model>
+    private lateinit var vendor_dish_search : ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,12 +30,21 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
         DishRecycleview.layoutManager = LinearLayoutManager(this)
         DishRecycleview.setHasFixedSize(true)
 
+        vendor_dish_search = findViewById(R.id.vendor_dish_search)
+
         DishArrayList = arrayListOf<Vendor_Dish_Model>()
 
         vendor_dish_recyclerview_back.setOnClickListener {
 
             intent = Intent(this,Vendor_Dish_Add_Data::class.java)
             startActivity(intent)
+        }
+
+        vendor_dish_search.setOnClickListener {
+
+            intent = Intent(this,Searching::class.java)
+            startActivity(intent)
+
         }
 
         getUserData()

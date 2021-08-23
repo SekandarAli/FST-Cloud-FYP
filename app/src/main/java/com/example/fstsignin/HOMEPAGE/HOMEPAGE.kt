@@ -1,4 +1,4 @@
-package com.example.HOMEPAGE
+package com.example.fstsignin.HOMEPAGE
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +14,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.fstsignin.FOOD.FoodFragment
-import com.example.MAPS.Map_location
+import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.R
 import com.example.fstsignin.SHOP.ShopFragment
 import com.example.fstsignin.Start_Pages.FSTRegisterPage

@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.R
+import com.example.fstsignin.SEARCH.Searching
 import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
@@ -35,6 +36,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
     lateinit var vendor_dish_price: EditText
     lateinit var vendor_chooseImage: Button
     lateinit var vendor_dish_back: Button
+    lateinit var vendor_search_data: Button
 
     //Strings and constant
     // var dish_image : String = ""
@@ -55,7 +57,6 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
         val add_data: Button = findViewById(R.id.vendor_add_data)
         val show_data: Button = findViewById(R.id.vendor_show_data)
         vendor_chooseImage = findViewById(R.id.vendor_choose_image)
-        //vendor_dish_name = findViewById(R.id.vendor_food_name)
         vendor_dish_name = findViewById(R.id.vendor_food_name)
         vendor_dish_description = findViewById(R.id.vendor_food_description)
         vendor_dish_price = findViewById(R.id.vendor_food_price)
@@ -84,6 +85,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
             startActivity(intent)
 
         }
+
 
         show_data.setOnClickListener {
 

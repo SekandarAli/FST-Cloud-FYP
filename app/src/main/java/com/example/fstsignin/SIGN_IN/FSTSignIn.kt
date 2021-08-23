@@ -8,7 +8,7 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.Start_Pages.FSTForgetpassword
-import com.example.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
 import com.example.fstsignin.SIGN_UP.FSTSignUp
 import com.google.firebase.auth.FirebaseAuth

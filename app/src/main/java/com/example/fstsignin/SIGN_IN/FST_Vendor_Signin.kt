@@ -7,10 +7,9 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.Start_Pages.FSTForgetpassword
-import com.example.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
-import com.example.fstsignin.Vendor.Vendor_Main_Page
-import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
+import com.example.fstsignin.VENDOR.Vendor_Main_Page
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth

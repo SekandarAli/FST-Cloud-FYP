@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
-import com.example.HOMEPAGE.HOMEPAGE
+import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
 import com.example.fstsignin.SIGN_IN.FSTSignIn
 import com.example.fstsignin.SIGN_UP.FSTSignUp

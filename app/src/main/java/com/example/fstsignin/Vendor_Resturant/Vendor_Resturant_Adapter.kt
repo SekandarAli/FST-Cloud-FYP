@@ -32,14 +32,14 @@ class Vendor_Resturant_Adapter(var context : Context, var dish_list : ArrayList<
         holder.resturant_location.setText(currentItem.resturant_location)
         holder.resturant_description.setText(currentItem.resturant_description)
 
-//        if(currentItem.dish_image == null)
-//        {
-//
-//        }
-//        else
-//        {
-//            Picasso.get().load(currentItem.dish_image).into(holder.dish_image)
-//        }
+        if(currentItem.resturant_image == null)
+        {
+
+        }
+        else
+        {
+            Picasso.get().load(currentItem.resturant_image).into(holder.resturant_image)
+        }
 
         //Picasso.get().load(currentItem.resturant_image).into(holder.resturant_image)
 

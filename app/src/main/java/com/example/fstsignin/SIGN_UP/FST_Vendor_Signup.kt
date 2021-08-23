@@ -9,7 +9,6 @@ import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.MAPS.Map_location
 import com.example.fstsignin.R
 import com.example.fstsignin.SIGN_IN.FST_Vendor_Signin
 import com.google.firebase.auth.FirebaseAuth

@@ -1,4 +1,4 @@
-package com.example.MAPS
+package com.example.fstsignin.MAPS
 
 import android.Manifest
 import android.content.pm.PackageManager

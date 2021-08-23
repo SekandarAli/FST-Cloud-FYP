@@ -126,17 +126,15 @@
             android:id="@+id/vendor_show_data"
             ></Button>
 
-        <Button
-            style="@style/buttonsign"
-            android:text="Back"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/button"
-            android:id="@+id/vendor_dish_back"
-            ></Button>
+            <Button
+                style="@style/buttonsign"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button"
+                android:id="@+id/vendor_dish_back"
+                android:text="Back"></Button>
 
 
-
-    </LinearLayout>
+        </LinearLayout>
 
 
     </LinearLayout>
@@ -144,3 +142,4 @@
 
 
 </LinearLayout>
+

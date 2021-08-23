@@ -48,8 +48,14 @@
 
                 <item
                     android:id="@+id/Support"
-                    android:icon="@mipmap/outline_logout_black_18"
+                    android:icon="@mipmap/outline_contact_support_black_18"
                     android:title="Support/FAQs"
+                    android:menuCategory="system"/>
+
+                <item
+                    android:id="@+id/version"
+                    android:title="Version 1.0.0"
+                    android:icon="@drawable/lock"
                     android:menuCategory="system"/>
 
 

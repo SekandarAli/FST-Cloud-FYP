@@ -20,7 +20,8 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name=".Vendor.Vendor_Main_Page"></activity>
+        <activity android:name=".SEARCH.Searching"></activity>
+        <activity android:name=".VENDOR.Vendor_Main_Page" />
         <activity android:name=".Start_Pages.Animated_Splash_Screen" />
         <activity android:name=".Vendor_Dish.showdata_adapter" /> <!-- <activity android:name=".Vendor.Vendor_Main_Page"></activity> -->
         <!-- <activity android:name=".Vendor.Vendor_Show_Image" /> -->
@@ -43,9 +44,9 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.example.MAPS.Map_location"
+            android:name=".MAPS.Map_location"
             android:label="@string/title_activity_map_location" />
-        <activity android:name="com.example.HOMEPAGE.HOMEPAGE" />
+        <activity android:name=".HOMEPAGE.HOMEPAGE" />
         <activity android:name=".FOOD.FoodMainPageFST" />
         <activity android:name=".SHOP.ShopMainPageFST" />
         <activity android:name=".TRAVEL.TravelMainPageFST" />
@@ -56,9 +57,9 @@
         <activity android:name=".Vendor_Dish.Vendor_Dish_Add_Data" />
         <activity android:name=".Vendor_Dish.Vendor_Dish_Show_Data" />
         <activity android:name=".Vendor_Resturant.Vendor_Restaurant_Show_Data" />
-        <activity android:name=".Vendor.Vendor_Main_Page"
+        <activity
+            android:name=".VENDOR.Vendor_Main_Page"
             tools:ignore="DuplicateActivity" />
-
         <activity android:name=".Start_Pages.Logo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
