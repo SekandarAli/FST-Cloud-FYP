@@ -11,7 +11,6 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.R
-import com.example.fstsignin.SEARCH.Searching
 import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
 import com.squareup.picasso.Picasso
@@ -34,14 +35,14 @@ class Vendor_Dish_Adapter (var context : Context, var dish_list : ArrayList<Vend
         holder.dish_price.setText(currentItem.dish_price)
         holder.dish_description.setText(currentItem.dish_description)
 
-//        if(currentItem.dish_image == null)
-//        {
-//
-//        }
-//        else
-//        {
-//            Picasso.get().load(currentItem.dish_image).into(holder.dish_image)
-//        }
+        if(currentItem.dish_image == null)
+        {
+            Toast.makeText(context, "Image cannot be null", Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
+            Picasso.get().load(currentItem.dish_image).into(holder.dish_image)
+        }
 
      Picasso.get().load(currentItem.dish_image).into(holder.dish_image)
 

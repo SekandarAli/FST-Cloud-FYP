@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
-import com.example.fstsignin.SEARCH.Searching
+import com.example.fstsignin.SEARCH.Searching_User
 import com.google.firebase.database.*
 
 class Vendor_Dish_Show_Data : AppCompatActivity() {
@@ -42,7 +42,7 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
 
         vendor_dish_search.setOnClickListener {
 
-            intent = Intent(this,Searching::class.java)
+            intent = Intent(this,Searching_User::class.java)
             startActivity(intent)
 
         }

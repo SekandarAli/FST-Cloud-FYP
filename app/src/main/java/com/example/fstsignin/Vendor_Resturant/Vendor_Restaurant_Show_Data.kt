@@ -46,7 +46,7 @@ class Vendor_Restaurant_Show_Data : AppCompatActivity() {
 
             var resturant_name : String? = ""
             dbref = FirebaseDatabase.getInstance().getReference()
-            var query : Query = dbref.child("Dish/")
+            var query : Query = dbref.child("Restaurant/")
 
             query.addValueEventListener(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
@@ -54,7 +54,7 @@ class Vendor_Restaurant_Show_Data : AppCompatActivity() {
                         for(userSnapShot in snapshot.children)
                         {
                             val resturant = userSnapShot.getValue(Vendor_Resturant_Model::class.java)
-                            resturant_name = userSnapShot.child("dish_name").value.toString()
+                            resturant_name = userSnapShot.child("restaurant_name").value.toString()
                             ResturantArrayList.add(resturant!!)
                         }
                         ResturantRecycleview.adapter =

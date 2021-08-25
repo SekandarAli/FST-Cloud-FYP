@@ -37,12 +37,12 @@
         android:orientation="vertical">
 
 
-        <Button
-            android:id="@+id/vendor_add_resturant"
-            style="@style/buttonregister"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/button"
-            android:text="Add Resturant"></Button>
+<!--        <Button-->
+<!--            android:id="@+id/vendor_add_resturant"-->
+<!--            style="@style/buttonregister"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:text="Add Resturant"></Button>-->
 
 
         <Button
@@ -50,7 +50,16 @@
             style="@style/buttonregister"
             android:layout_marginTop="15dp"
             android:background="@drawable/button"
+            android:textAllCaps="false"
             android:text="Add Dish"></Button>
+
+        <Button
+            style="@style/buttonregister"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button"
+            android:textAllCaps="false"
+            android:text="Add More...."
+            android:onClick="addmore"></Button>
 
 
     </LinearLayout>

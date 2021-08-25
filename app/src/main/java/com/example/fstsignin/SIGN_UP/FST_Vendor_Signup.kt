@@ -4,12 +4,11 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Switch
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.R
+import com.example.fstsignin.SIGN_IN.FSTSignIn
 import com.example.fstsignin.SIGN_IN.FST_Vendor_Signin
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -33,11 +32,24 @@ class FST_Vendor_Signup : AppCompatActivity() {
 
         val vendor_signup : Button = findViewById(R.id.vendor_Signup)
         val vendor_Email : EditText = findViewById(R.id.vendor_Email)
-        //val vendor_Restaurant : EditText = findViewById(R.id.vendorRestaurant)
+        val vendor_resturant_name : EditText = findViewById(R.id.vendor_resturant_name)
         val vendorUsername : EditText = findViewById(R.id.vendorUsername)
         val vendor_Phoneno : EditText = findViewById(R.id.vendor_Phoneno)
         val vendor_Password : EditText = findViewById(R.id.vendor_Password)
         val vendor_Repassword : EditText = findViewById(R.id.vendor_Repassword)
+
+        val vendor_signin : TextView = findViewById(R.id.vendor_signin)
+
+
+
+        vendor_signin.setOnClickListener(View.OnClickListener {
+
+            intent = Intent(this, FST_Vendor_Signin::class.java)
+            startActivity(intent)
+        })
+
+
+
         val s2 : Switch = findViewById(R.id.switch2)
 
         s2.isChecked
@@ -107,6 +119,10 @@ class FST_Vendor_Signup : AppCompatActivity() {
                 vendor_Repassword?.error = "Password doesnot match."
                 vendor_Password.isFocusable
 
+            } else if (vendor_resturant_name.text.isNullOrBlank()) {
+                vendor_resturant_name?.error = "Resturant name cannot be empty."
+                vendor_resturant_name.isFocusable
+
             } else if (vendor_Email.text.isEmpty() && vendor_Password.text.isEmpty() &&
                 vendor_Repassword.text.isEmpty() && vendorUsername.text.isEmpty() &&
                 vendor_Phoneno.text.isEmpty()
@@ -116,6 +132,7 @@ class FST_Vendor_Signup : AppCompatActivity() {
                 vendor_Email?.error = "Empty"
                 vendor_Password?.error = "Empty"
                 vendor_Repassword?.error = "Empty"
+                vendor_resturant_name?.error = "Empty"
                 vendorUsername.isFocusable
 
             }

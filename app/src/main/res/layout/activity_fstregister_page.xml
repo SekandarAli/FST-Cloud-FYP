@@ -38,29 +38,52 @@
 
 
         <Button
-            android:id="@+id/signin"
+            android:id="@+id/continue_user"
             style="@style/buttonregister"
             android:layout_marginTop="10dp"
+            android:textAllCaps="false"
             android:background="@drawable/button"
-            android:text="signin"></Button>
+            android:text="Continue as User"></Button>
 
 
         <Button
-            android:id="@+id/signup"
+            android:id="@+id/continue_vendor"
             style="@style/buttonregister"
             android:layout_marginTop="15dp"
+            android:textAllCaps="false"
             android:background="@drawable/button"
-            android:text="signup"></Button>
+            android:text="Continue as Vendor"></Button>
 
 
-        <ImageView
-            android:id="@+id/next"
+<!--        <ImageView-->
+<!--            android:id="@+id/next"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:src="@mipmap/skip"></ImageView>-->
+
+
+        <TextView
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="65dp"
             android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
-            android:src="@mipmap/skip"></ImageView>
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:text="----------Or----------"
+            android:layout_gravity="center"/>
 
+
+        <Button
+            android:id="@+id/next"
+            style="@style/buttonskip"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button"
+            android:backgroundTint="@color/white"
+            android:textAllCaps="false"
+            android:text="Skip"></Button>
     </LinearLayout>
 
 

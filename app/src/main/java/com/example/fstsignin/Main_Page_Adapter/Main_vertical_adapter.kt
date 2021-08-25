@@ -1,4 +1,4 @@
-package com.example.fstsignin.Food_Main_Page_Adapter
+package com.example.fstsignin.Main_Page_Adapter
 
 import android.content.Context
 import android.content.Intent
@@ -11,10 +11,10 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.FOOD.FoodDetailsFST
 import com.example.fstsignin.R
-import com.example.fstsignin.Food_Main_Page_Model.food_main_vertical_model
+import com.example.fstsignin.Main_Page_Model.Main_vertical_model
 
-class food_main_vertical_adapter (var items : ArrayList<food_main_vertical_model>, context
-                : Context) : RecyclerView.Adapter<food_main_vertical_adapter.ViewHolder>() {
+class Main_vertical_adapter (var items : ArrayList<Main_vertical_model>, context
+                : Context) : RecyclerView.Adapter<Main_vertical_adapter.ViewHolder>() {
 
 
     val context = context
@@ -62,10 +62,10 @@ class food_main_vertical_adapter (var items : ArrayList<food_main_vertical_model
         var view = itemView
 
         init {
-            itemImage = itemView.findViewById(R.id.image)
-            itemName = itemView.findViewById(R.id.name)
-            itemDescription = itemView.findViewById(R.id.description)
-            itemRating = itemView.findViewById(R.id.rating)
+            itemImage = itemView.findViewById(R.id.vertical_image)
+            itemName = itemView.findViewById(R.id.vertical_name)
+            itemDescription = itemView.findViewById(R.id.vertical_description)
+            itemRating = itemView.findViewById(R.id.vertical_price)
 
             itemView.setOnClickListener(View.OnClickListener {
                 var intent = Intent(context, FoodDetailsFST::class.java)

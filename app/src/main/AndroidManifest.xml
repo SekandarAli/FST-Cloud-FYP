@@ -20,7 +20,8 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name=".SEARCH.Searching"></activity>
+        <activity android:name=".SEARCH.Searching_Vendor"></activity>
+        <activity android:name=".SEARCH.Searching_User" />
         <activity android:name=".VENDOR.Vendor_Main_Page" />
         <activity android:name=".Start_Pages.Animated_Splash_Screen" />
         <activity android:name=".Vendor_Dish.showdata_adapter" /> <!-- <activity android:name=".Vendor.Vendor_Main_Page"></activity> -->

@@ -1,20 +1,16 @@
 package com.example.fstsignin.SEARCH
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Adapter
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
-import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Show_Data
 import com.google.firebase.database.*
 
-class Searching : AppCompatActivity() {
+class Searching_User : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
     private lateinit var DishRecycleview : RecyclerView
     private lateinit var DishArrayList : ArrayList<Vendor_Dish_Model>
@@ -23,7 +19,7 @@ class Searching : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_searching)
+        setContentView(R.layout.activity_searching_user)
 
         DishRecycleview = findViewById(R.id.searchData_recycleview)
         DishRecycleview.layoutManager = LinearLayoutManager(this)
@@ -31,7 +27,16 @@ class Searching : AppCompatActivity() {
 
         DishArrayList = arrayListOf<Vendor_Dish_Model>()
 
-        var tv_search_text = findViewById<EditText>(R.id.ed_search_text)
+        var tv_search_text = findViewById<AutoCompleteTextView>(R.id.ed_search_text)
+
+
+        val suggestions = arrayOf("pizza","food","mutton","burger","salad","biryani")
+
+        val adapter: ArrayAdapter<*> =
+            ArrayAdapter<Any?>(this, android.R.layout.simple_list_item_1, suggestions)
+
+        tv_search_text.setAdapter(adapter)
+        tv_search_text.setThreshold(1)
 
 
 
@@ -76,17 +81,17 @@ class Searching : AppCompatActivity() {
 
                         DishArrayList.add(dish!!)
                     }
-                    DishRecycleview.adapter = Vendor_Dish_Adapter(this@Searching,DishArrayList)
+                    DishRecycleview.adapter = Vendor_Dish_Adapter(this@Searching_User,DishArrayList)
 
                 }
                 else
                 {
-                    Toast.makeText(this@Searching, "snapshot does not exist", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Searching_User, "snapshot does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Searching, "Something went wrong", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@Searching_User, "Something went wrong", Toast.LENGTH_SHORT).show()
             }
         })
 

@@ -29,7 +29,7 @@ class FSTSignIn : AppCompatActivity() {
         auth = Firebase.auth
 
         val login : Button = findViewById(R.id.login)
-        val tvsignup : TextView = findViewById(R.id.tvsignup)
+        val tvsignup : TextView = findViewById(R.id.user_signup)
         val forgetpassword : TextView = findViewById(R.id.forgetpassword)
         val signinemail : EditText = findViewById(R.id.signinemail)
         val signinpassword : EditText = findViewById(R.id.signinpassword)

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.Start_Pages.FSTForgetpassword
 import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
+import com.example.fstsignin.SIGN_UP.FST_Vendor_Signup
 import com.example.fstsignin.VENDOR.Vendor_Main_Page
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -31,6 +32,7 @@ class FST_Vendor_Signin : AppCompatActivity() {
         val vendor_forgetpassword : TextView = findViewById(R.id.vendor_forgetpassword)
         val vendor_signinemail : EditText = findViewById(R.id.vendor_signinemail)
         val vendor_signinpassword : EditText = findViewById(R.id.vendor_signinpassword)
+        val vendor_signup : TextView = findViewById(R.id.vendor_signup)
         val switch_signin_vendor : Switch = findViewById(R.id.switch_signIn_vendor)
 
         switch_signin_vendor.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -131,6 +133,12 @@ class FST_Vendor_Signin : AppCompatActivity() {
         vendor_forgetpassword.setOnClickListener(View.OnClickListener {
 
             intent = Intent(this, FSTForgetpassword::class.java)
+            startActivity(intent)
+        })
+
+        vendor_signup.setOnClickListener(View.OnClickListener {
+
+            intent = Intent(this, FST_Vendor_Signup::class.java)
             startActivity(intent)
         })
 

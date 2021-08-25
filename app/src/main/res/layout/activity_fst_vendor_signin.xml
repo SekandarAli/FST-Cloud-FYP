@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
@@ -72,8 +72,8 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_gravity="center"
-        android:gravity="top"
-        android:layout_weight="0.8"
+        android:layout_weight="0.5"
+        android:gravity="center"
         android:orientation="vertical"
         >
 
@@ -127,6 +127,36 @@
             ></Button>
 
 
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1.1"
+        android:gravity="center"
+
+        >
+
+        <TextView
+            android:id="@+id/tv3"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:text="Already Have An Account?"
+            android:layout_height="30sp"
+            android:layout_width="wrap_content"
+            />
+
+
+        <TextView
+            android:id="@+id/vendor_signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/logo"
+            android:textStyle="bold"
+            android:text="SignUp" />
 
     </LinearLayout>
 

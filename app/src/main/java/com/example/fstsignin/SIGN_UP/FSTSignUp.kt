@@ -32,7 +32,7 @@ class FSTSignUp : AppCompatActivity() {
         supportActionBar?.hide()
 
         val signup : Button = findViewById(R.id.signup)
-        val tvsignin : TextView = findViewById(R.id.tvsignin)
+        val tvsignin : TextView = findViewById(R.id.user_signin)
         val authh : TextView = findViewById(R.id.tv2)
         val signupemail : EditText = findViewById(R.id.signupemail)
         val signupusername : EditText = findViewById(R.id.signupusername)

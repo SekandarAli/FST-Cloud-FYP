@@ -20,7 +20,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:id="@+id/image"
+            android:id="@+id/vertical_image"
             android:scaleType="centerCrop"
             ></ImageView>
 
@@ -34,31 +34,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"
+                android:textSize="18dp"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:hint="Name"
-                android:id="@+id/name">
+                android:id="@+id/vertical_name">
 
             </TextView>
 
 
             <TextView
-                android:id="@+id/description"
+                android:id="@+id/vertical_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:hint="Description"
-                android:textSize="10sp"/>
+                android:textSize="13sp"/>
 
             <TextView
-                android:id="@+id/rating"
+                android:id="@+id/vertical_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:hint="Rating"
+                android:hint="Price"
+                android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="10sp">
+                android:textSize="16sp">
 
             </TextView>
 

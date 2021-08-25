@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
@@ -34,7 +35,7 @@ class Vendor_Resturant_Adapter(var context : Context, var dish_list : ArrayList<
 
         if(currentItem.resturant_image == null)
         {
-
+            Toast.makeText(context, "Image cannot be null", Toast.LENGTH_SHORT).show()
         }
         else
         {

@@ -60,6 +60,7 @@
             android:drawablePadding="20sp"
             android:id="@+id/vendor_choose_image"
             android:layout_height="55dp"
+            android:textColor="@color/white"
             ></Button>
 
         <EditText
@@ -99,7 +100,8 @@
             android:hint="Enter Food Price"
             android:layout_height="50dp"
             android:singleLine="true"
-            android:inputType="text"></EditText>
+            android:maxLength="5"
+            android:inputType="number"></EditText>
 
 
         <LinearLayout

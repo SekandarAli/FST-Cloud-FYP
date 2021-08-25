@@ -19,7 +19,7 @@
 
 
 
-        <EditText
+        <AutoCompleteTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
@@ -29,6 +29,8 @@
             android:textColor="@color/logo"
             android:gravity="center"
             android:id="@+id/ed_search_text"
+            android:singleLine="true"
+            android:maxLength="12"
             />
 
 
@@ -41,7 +43,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Clear values"
+            android:text="Clear search"
             android:id="@+id/btn_clear"/>
 
 
@@ -58,11 +60,11 @@
 
 
 
-    <Button
-        android:id="@+id/btn_back"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="back" />
+<!--    <Button-->
+<!--        android:id="@+id/btn_back"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="back" />-->
 
 
 </LinearLayout>

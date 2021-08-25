@@ -125,7 +125,7 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
 
         //Real Time data base Initialization code
         root_Node = FirebaseDatabase.getInstance()
-        reference = root_Node!!.getReference("Dish")
+        reference = root_Node!!.getReference("Restaurant")
 
         var resturant_name = vendor_resturant_name.text.toString()
         var resturant_description = vendor_resturant_description.text.toString()
@@ -133,7 +133,7 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
 
 
         // Only Image Uploading to cloud storage Code
-        val ref: StorageReference = Storageref.child("Dish/" + UUID.randomUUID().toString())
+        val ref: StorageReference = Storageref.child("Restaurant/" + UUID.randomUUID().toString())
         var uploadTask = ref.putFile(filepath)
         val urlTask =
             uploadTask?.continueWithTask(Continuation<UploadTask.TaskSnapshot, Task<Uri>> { task ->

@@ -1,6 +1,6 @@
-package com.example.fstsignin.Food_Main_Page_Model
+package com.example.fstsignin.Main_Page_Model
 
-class food_main_horizontal_card_model {
+class Main_horizontal_card_model {
 
     var name : String
     var image : Int

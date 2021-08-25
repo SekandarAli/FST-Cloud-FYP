@@ -10,6 +10,7 @@ import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
 import com.example.fstsignin.SIGN_IN.FSTSignIn
 import com.example.fstsignin.SIGN_UP.FSTSignUp
+import com.example.fstsignin.SIGN_UP.FST_Vendor_Signup
 
 class FSTRegisterPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,22 +19,22 @@ class FSTRegisterPage : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        val signup : Button = findViewById(R.id.signup)
-        val signin : Button = findViewById(R.id.signin)
-        val next : ImageView = findViewById(R.id.next)
+        val continue_user : Button = findViewById(R.id.continue_user)
+        val continue_vendor : Button = findViewById(R.id.continue_vendor)
+        val next : Button = findViewById(R.id.next)
 
 
 
-        signup.setOnClickListener(View.OnClickListener {
+        continue_user.setOnClickListener(View.OnClickListener {
 
             intent = Intent(this, FSTSignUp::class.java)
             startActivity(intent)
         })
 
 
-        signin.setOnClickListener(View.OnClickListener {
+        continue_vendor.setOnClickListener(View.OnClickListener {
 
-            intent = Intent(this, FSTSignIn::class.java)
+            intent = Intent(this, FST_Vendor_Signup::class.java)
             startActivity(intent)
         })
 
