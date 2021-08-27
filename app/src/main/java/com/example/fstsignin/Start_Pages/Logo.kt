@@ -4,7 +4,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.widget.ImageView
 import com.example.fstsignin.R
+import com.google.firebase.database.core.view.View
 
 class Logo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,26 +15,30 @@ class Logo : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        Handler().postDelayed({
-            val intent = Intent(this, FSTRegisterPage::class.java)
-            startActivity(intent)
-            finish()
-        }, 30)
+        val logo: ImageView = findViewById(R.id.start_logo)
+
+        logo.animate().apply {
+            duration = 8000
+            rotationBy(360f)
+
+        }.start()
+
+            Handler().postDelayed({
 
 
+                val intent = Intent(this, FSTRegisterPage::class.java)
+                startActivity(intent)
+                finish()
+            }, 4000)
 
 
-//        val next : Button = findViewById(R.id.next)
 //
-//        next.setOnClickListener(View.OnClickListener {
+//        logo.setOnClickListener {
 //
 //
-//            //intent = Intent(this,HOMEPAGE::class.java)
 //            intent = Intent(this,FSTRegisterPage::class.java)
 //            startActivity(intent)
-//        })
+//        }
+        }
 
     }
-
-
-}

@@ -24,6 +24,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:background="@drawable/logoo"
+            android:id="@+id/start2_logo"
             android:src="@drawable/logo"></de.hdodenhof.circleimageview.CircleImageView>
 
 

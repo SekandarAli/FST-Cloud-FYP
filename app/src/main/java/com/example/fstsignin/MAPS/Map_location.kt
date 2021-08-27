@@ -112,3 +112,4 @@ class Map_location : AppCompatActivity(), OnMapReadyCallback {
 
     }
 }
+
