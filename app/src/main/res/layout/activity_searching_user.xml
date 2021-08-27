@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="20sp"
+            android:textSize="23sp"
             android:hint="Enter data to Search"
             android:layout_marginTop="20dp"
             android:textColor="@color/logo"
@@ -36,15 +36,9 @@
 
         <Button
             android:id="@+id/btn_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/buttonregister"
             android:text="Search" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Clear search"
-            android:id="@+id/btn_clear"/>
 
 
 
@@ -55,10 +49,15 @@
 
             />
 
+
     </LinearLayout>
 
 
 
+    <Button
+        style="@style/buttonskip"
+        android:text="Clear search"
+        android:id="@+id/btn_clear"/>
 
 <!--    <Button-->
 <!--        android:id="@+id/btn_back"-->

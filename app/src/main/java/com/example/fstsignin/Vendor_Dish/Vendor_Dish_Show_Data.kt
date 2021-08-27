@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.R
 import com.example.fstsignin.SEARCH.Searching_User
+import com.example.fstsignin.SEARCH.Searching_Vendor
 import com.google.firebase.database.*
 
 class Vendor_Dish_Show_Data : AppCompatActivity() {
@@ -42,7 +43,7 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
 
         vendor_dish_search.setOnClickListener {
 
-            intent = Intent(this,Searching_User::class.java)
+            intent = Intent(this, Searching_Vendor::class.java)
             startActivity(intent)
 
         }
@@ -57,6 +58,7 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
         var query : Query = dbref.child("Dish/")
 
         query.addValueEventListener(object : ValueEventListener{
+
             override fun onDataChange(snapshot: DataSnapshot) {
                 if(snapshot.exists()){
                     for(userSnapShot in snapshot.children)
@@ -70,13 +72,14 @@ class Vendor_Dish_Show_Data : AppCompatActivity() {
                 }
                 else
                 {
-                    Toast.makeText(this@Vendor_Dish_Show_Data, "snapshot does not exist", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@Vendor_Dish_Show_Data, "Snapshot does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(this@Vendor_Dish_Show_Data, "Something went wrong", Toast.LENGTH_SHORT).show()
             }
+
         })
 
 

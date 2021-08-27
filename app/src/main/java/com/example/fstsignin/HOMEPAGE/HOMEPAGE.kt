@@ -16,6 +16,7 @@ import androidx.viewpager.widget.ViewPager
 import com.example.fstsignin.FOOD.FoodFragment
 import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.R
+import com.example.fstsignin.SEARCH.Searching_User
 import com.example.fstsignin.SHOP.ShopFragment
 import com.example.fstsignin.Start_Pages.FSTRegisterPage
 import com.example.fstsignin.TRAVEL.TravelFragment
@@ -54,8 +55,17 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
 
         val locationn : ImageView = findViewById(R.id.locationn)
+        val search : ImageView = findViewById(R.id.main_search)
+
+
         locationn.setOnClickListener{
             intent = Intent(this, Map_location::class.java)
+            startActivity(intent)
+        }
+
+
+        search.setOnClickListener{
+            intent = Intent(this, Searching_User::class.java)
             startActivity(intent)
         }
 
@@ -138,6 +148,13 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
             R.id.setting -> {
                 Toast.makeText(this, "Setting Clicked", Toast.LENGTH_SHORT).show()
+            }
+            R.id.support -> {
+                Toast.makeText(this, "Support Clicked", Toast.LENGTH_SHORT).show()
+            }
+
+            R.id.version -> {
+                Toast.makeText(this, "Version is 1.0.0", Toast.LENGTH_SHORT).show()
             }
 
              R.id.logout -> {

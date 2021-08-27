@@ -41,11 +41,12 @@ class Searching_User : AppCompatActivity() {
 
 
         var btn_search = findViewById<Button>(R.id.btn_search)
-        var btn_clear = findViewById<Button>(R.id.btn_clear).setOnClickListener {
+        var btn_clear = findViewById<Button>(R.id.btn_clear)
 
+            btn_clear.setOnClickListener {
 
-            tv_search_text.text.clear()
-        }
+                tv_search_text.text.clear()
+            }
 
 
 //
@@ -58,7 +59,7 @@ class Searching_User : AppCompatActivity() {
 
         btn_search.setOnClickListener {
             search_text = tv_search_text.text.toString()
-            Toast.makeText(this, "text = "+search_text, Toast.LENGTH_SHORT).show()
+            //Toast.makeText(this, "text = "+search_text, Toast.LENGTH_SHORT).show()
             getData()
 
         }

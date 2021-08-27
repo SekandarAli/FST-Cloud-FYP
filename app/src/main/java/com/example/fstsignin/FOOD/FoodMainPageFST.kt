@@ -241,61 +241,61 @@ class FoodMainPageFST : AppCompatActivity() {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-
-        menuInflater.inflate(R.menu.menu,menu)
-        var menuItem = menu!!.findItem(R.id.search)
-
-        if(menuItem != null)
-        {
-            val searchView = menuItem.actionView as SearchView
-
-            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
-
-                override fun onQueryTextSubmit(query: String?): Boolean {
-
-                    return true
-
-                }
-
-                override fun onQueryTextChange(newText: String?): Boolean {
-
-                    if(newText!!.isNotEmpty())
-                    {
-                        vdisplayList.clear()
-
-                        var search = newText.toLowerCase(Locale.getDefault())
-                        vitems.forEach {
-
-                            if(it.name.toLowerCase(Locale.getDefault()).contains(search))
-                            {
-                                vdisplayList.add(it)
-                            }
-                        }
-
-                        vrecycleView.adapter!!.notifyDataSetChanged()
-
-                    }
-
-                    else
-                    {
-                        vdisplayList.clear()
-                        vdisplayList.addAll(vitems)
-                        vrecycleView.adapter!!.notifyDataSetChanged()
-                    }
-                    return true
-
-                }
-
-            })
-        }
-
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//
+//        menuInflater.inflate(R.menu.menu,menu)
+//        var menuItem = menu!!.findItem(R.id.search)
+//
+//        if(menuItem != null)
+//        {
+//            val searchView = menuItem.actionView as SearchView
+//
+//            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+//
+//                override fun onQueryTextSubmit(query: String?): Boolean {
+//
+//                    return true
+//
+//                }
+//
+//                override fun onQueryTextChange(newText: String?): Boolean {
+//
+//                    if(newText!!.isNotEmpty())
+//                    {
+//                        vdisplayList.clear()
+//
+//                        var search = newText.toLowerCase(Locale.getDefault())
+//                        vitems.forEach {
+//
+//                            if(it.name.toLowerCase(Locale.getDefault()).contains(search))
+//                            {
+//                                vdisplayList.add(it)
+//                            }
+//                        }
+//
+//                        vrecycleView.adapter!!.notifyDataSetChanged()
+//
+//                    }
+//
+//                    else
+//                    {
+//                        vdisplayList.clear()
+//                        vdisplayList.addAll(vitems)
+//                        vrecycleView.adapter!!.notifyDataSetChanged()
+//                    }
+//                    return true
+//
+//                }
+//
+//            })
+//        }
+//
+//        return super.onCreateOptionsMenu(menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return super.onOptionsItemSelected(item)
+//    }
 
 
     fun getUserData(){

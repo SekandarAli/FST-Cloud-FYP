@@ -47,7 +47,7 @@
         >
 
                 <item
-                    android:id="@+id/Support"
+                    android:id="@+id/support"
                     android:icon="@mipmap/outline_contact_support_black_18"
                     android:title="Support/FAQs"
                     android:menuCategory="system"/>
