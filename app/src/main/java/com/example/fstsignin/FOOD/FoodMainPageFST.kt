@@ -3,18 +3,16 @@ package com.example.fstsignin.FOOD
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.ImageView
-import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.HOMEPAGE.HOMEPAGE
-import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.*
 import com.example.fstsignin.Dish_Main_Page.Dish_Main_page_Adapter
+import com.example.fstsignin.MAPS.Map_User
+import com.example.fstsignin.MAPS.Map_Vendor
 import com.example.fstsignin.Main_Page_Adapter.Main_horizontal_card_adapter
 import com.example.fstsignin.Main_Page_Adapter.Main_horizontal_list_adapter
 import com.example.fstsignin.Main_Page_Model.Main_horizontal_card_model
@@ -24,6 +22,7 @@ import com.example.fstsignin.R
 import com.example.fstsignin.SEARCH.Searching_User
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -84,7 +83,7 @@ class FoodMainPageFST : AppCompatActivity() {
 
 
         location.setOnClickListener{
-            intent = Intent(this, Map_location::class.java)
+            intent = Intent(this, Map_User::class.java)
             startActivity(intent)
         }
 
@@ -226,9 +225,6 @@ class FoodMainPageFST : AppCompatActivity() {
 
 
 
-
-
-
         vrecycleView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
 
@@ -318,12 +314,12 @@ class FoodMainPageFST : AppCompatActivity() {
                 }
                 else
                 {
-                    Toast.makeText(this@FoodMainPageFST, "snapshot does not exist", Toast.LENGTH_SHORT).show()
+                    Toasty.error(this@FoodMainPageFST, "Snapshot does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@FoodMainPageFST, "Something went wrong", Toast.LENGTH_SHORT).show()
+                Toasty.info(this@FoodMainPageFST, "Something went wrong", Toast.LENGTH_SHORT).show()
             }
         })
 

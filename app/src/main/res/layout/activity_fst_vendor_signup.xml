@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.8"
         android:orientation="horizontal"
         android:gravity="center"
         >
@@ -27,7 +27,7 @@
             >
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/vendor_signup_imageView"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="5dp"
@@ -62,7 +62,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:gravity="top"
-        android:layout_weight="0.6"
+        android:layout_weight="1"
         >
 
 
@@ -83,16 +83,16 @@
             android:singleLine="true"
             android:drawableRight="@drawable/ic_user" />
 
-        <EditText
+<!--        <EditText-->
 
-            android:id="@+id/vendor_resturant_name"
-            style="@style/editTextsignup"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/logo"
-            android:drawablePadding="10dp"
-            android:hint="Enter Restaurant Name"
-            android:singleLine="true"
-            android:drawableRight="@drawable/ic_food" />
+<!--            android:id="@+id/vendor_resturant_name"-->
+<!--            style="@style/editTextsignup"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/logo"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:hint="Enter Restaurant Name"-->
+<!--            android:singleLine="true"-->
+<!--            android:drawableRight="@drawable/ic_food" />-->
 
         <EditText
 
@@ -159,12 +159,34 @@
 
 
         <Button
+
             style="@style/vendor_Location"
-            android:text="Select location"
+            android:text="Add Restaurant Data"
             android:layout_marginTop="10dp"
             android:background="@drawable/button"
-            android:id="@+id/vendor_Location"
+            android:id="@+id/vendor_choose_image"
+            android:textAllCaps="false"
             ></Button>
+
+<!--        <Button-->
+<!--            style="@style/vendor_Location"-->
+<!--            android:text="Upload Image"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:id="@+id/vendor_upload_image"-->
+<!--            android:textAllCaps="false"-->
+<!--            ></Button>-->
+
+
+<!--        <Button-->
+<!--            style="@style/vendor_Location"-->
+<!--            android:text="Select Location"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/button"-->
+<!--            android:id="@+id/vendor_Location"-->
+<!--            ></Button>-->
+
 
 <!--        -->
 <!--        <TextView-->

@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
+        android:layout_weight="1.2"
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:gravity="center"
@@ -26,7 +26,6 @@
             android:layout_width="250dp"
             android:layout_height="200dp"
             android:layout_gravity="center"
-            android:layout_marginTop="10dp"
             android:src="@drawable/signinlogo"></ImageView>
 
 
@@ -112,26 +111,36 @@
             >
 
             <Button
+                style="@style/vendor_Location"
+                android:text="Select Location"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button"
+                android:id="@+id/vendor_Location"
+                ></Button>
+
+
+            <Button
                 android:id="@+id/vendor_resturant_add_data"
                 style="@style/buttonsign"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:text="Add data"></Button>
 
             <Button
                 style="@style/buttonsign"
                 android:text="Show data"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button"
                 android:id="@+id/vendor_resturant_show_data"
                 ></Button>
 
             <Button
-                android:id="@+id/add_data_next"
+                android:id="@+id/add_data_back"
                 style="@style/buttonsign"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button"
-                android:text="Next"></Button>
+                android:text="Back"></Button>
 
 
         </LinearLayout>

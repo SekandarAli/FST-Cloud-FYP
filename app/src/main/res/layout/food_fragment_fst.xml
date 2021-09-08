@@ -60,7 +60,7 @@
             ></TextView>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/verticalrecycleView"
+            android:id="@+id/restaurant_vertical_recycleView"
             android:layout_width="fill_parent"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="8dp"

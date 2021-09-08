@@ -12,6 +12,7 @@ import com.example.fstsignin.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import es.dmoral.toasty.Toasty
 
 class FSTForgetpassword : AppCompatActivity() {
 
@@ -33,16 +34,16 @@ class FSTForgetpassword : AppCompatActivity() {
             val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             inputMethodManager.hideSoftInputFromWindow(currentFocus!!.windowToken, 0)
             if (forgetEditText.text.toString().isNullOrEmpty())
-                Toast.makeText(this,"Email Address is not provided", Toast.LENGTH_LONG).show()
+                Toasty.info(this,"Email Address is not provided", Toast.LENGTH_LONG).show()
             else {
                 auth.sendPasswordResetEmail(
                     forgetEditText.text.toString())
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             val user = auth.currentUser
-                            Toast.makeText(this, "Reset Password Link is mailed", Toast.LENGTH_LONG).show()
+                            Toasty.success(this, "Reset Password Link is mailed", Toast.LENGTH_LONG).show()
                         } else
-                            Toast.makeText(this, "Password Reset mail could not be sent", Toast.LENGTH_LONG).show()
+                            Toasty.warning(this, "Password Reset mail could not be sent", Toast.LENGTH_LONG).show()
                     }
             }
 

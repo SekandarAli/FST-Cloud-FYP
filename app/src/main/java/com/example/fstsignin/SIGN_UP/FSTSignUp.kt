@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import es.dmoral.toasty.Toasty
 
 class FSTSignUp : AppCompatActivity() {
 
@@ -160,7 +161,7 @@ class FSTSignUp : AppCompatActivity() {
                                         db.collection("Users")
                                             .add(users)
                                             .addOnSuccessListener {
-                                                Toast.makeText(
+                                                Toasty.success(
                                                     this,
                                                     "Successfully added in DB",
                                                     Toast.LENGTH_SHORT
@@ -169,7 +170,7 @@ class FSTSignUp : AppCompatActivity() {
                                                 pd.dismiss()
 
                                             }.addOnFailureListener {
-                                                Toast.makeText(this, "FAILED unable to add data to database", Toast.LENGTH_SHORT)
+                                                Toasty.error(this, "FAILED unable to add data to database", Toast.LENGTH_SHORT)
                                                     .show()
 
                                             }
@@ -183,7 +184,7 @@ class FSTSignUp : AppCompatActivity() {
                                 }
                         }
                     }.addOnFailureListener {
-                        Toast.makeText(
+                        Toasty.error(
                             this,
                             "Sign Up failed, something went wrong OR account may already exist",
                             Toast.LENGTH_SHORT

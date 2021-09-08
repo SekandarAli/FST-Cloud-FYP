@@ -25,17 +25,17 @@ class FSTRegisterPage : AppCompatActivity() {
         val logo2 : ImageView = findViewById(R.id.start2_logo)
 
 
-        logo2.animate().apply {
-            duration = 8000
-            rotationBy(360f)
-
-        }.withEndAction {
-
-            logo2.animate().apply {
-                duration = 8000
-                rotationBy(360f)
-            }.start()
-        }
+//        logo2.animate().apply {
+//            duration = 8000
+//            rotationBy(360f)
+//
+//        }.withEndAction {
+//
+//            logo2.animate().apply {
+//                duration = 8000
+//                rotationBy(360f)
+//            }.start()
+//        }
 
         continue_user.setOnClickListener(View.OnClickListener {
 

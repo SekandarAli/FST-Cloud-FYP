@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import es.dmoral.toasty.Toasty
 
 class FSTSignIn : AppCompatActivity() {
 
@@ -111,7 +112,7 @@ class FSTSignIn : AppCompatActivity() {
                         }
                         else
 
-                            Toast.makeText(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
+                            Toasty.info(this, "Invalid Email or Password", Toast.LENGTH_SHORT).show()
                     }
                 pd.dismiss()
 

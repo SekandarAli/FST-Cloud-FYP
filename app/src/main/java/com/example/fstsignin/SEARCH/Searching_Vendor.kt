@@ -12,6 +12,7 @@ import com.example.fstsignin.R
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Adapter
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 
 class Searching_Vendor : AppCompatActivity() {
 
@@ -69,7 +70,7 @@ class Searching_Vendor : AppCompatActivity() {
 
 
                 dbref = FirebaseDatabase.getInstance().getReference()
-                var query : Query = dbref.child("Dish").orderByChild("resturant_name").equalTo(search_text)
+                var query : Query = dbref.child("Dish").orderByChild("restaurant_name").equalTo(search_text)
 
                 query.addValueEventListener(object : ValueEventListener {
                     override fun onDataChange(snapshot: DataSnapshot) {
@@ -85,12 +86,12 @@ class Searching_Vendor : AppCompatActivity() {
                         }
                         else
                         {
-                            Toast.makeText(this@Searching_Vendor, "snapshot does not exist", Toast.LENGTH_SHORT).show()
+                            Toasty.error(this@Searching_Vendor, "snapshot does not exist", Toast.LENGTH_SHORT).show()
                         }
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-                        Toast.makeText(this@Searching_Vendor, "Something went wrong", Toast.LENGTH_SHORT).show()
+                        Toasty.warning(this@Searching_Vendor, "Something went wrong", Toast.LENGTH_SHORT).show()
                     }
                 })
 

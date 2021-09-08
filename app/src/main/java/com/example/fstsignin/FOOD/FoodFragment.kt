@@ -141,7 +141,7 @@ class FoodFragment (context: Context): Fragment() {
         )
 
 
-        val vrecycleView: RecyclerView = v.findViewById(R.id.verticalrecycleView)
+        val vrecycleView: RecyclerView = v.findViewById(R.id.restaurant_vertical_recycleView)
         vrecycleView.layoutManager = LinearLayoutManager(food_context, LinearLayoutManager.VERTICAL, false)
 
         vadapter = vertical_recycle_main_food_adapter(vitems, food_context)

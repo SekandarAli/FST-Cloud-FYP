@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.fstsignin.R
+import com.example.fstsignin.VENDOR.Vendor_Main_Page
 import com.example.fstsignin.Vendor_Resturant.Vendor_Resturant_Add_Data
 import com.google.android.gms.tasks.Continuation
 import com.google.android.gms.tasks.Task
@@ -20,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import es.dmoral.toasty.Toasty
 import java.io.IOException
 import java.util.*
 
@@ -80,7 +82,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
         vendor_dish_back.setOnClickListener {
 
 
-            var intent = Intent(this, Vendor_Resturant_Add_Data::class.java)
+            var intent = Intent(this, Vendor_Main_Page::class.java)
             startActivity(intent)
 
         }
@@ -99,6 +101,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
             Add_Data()
 
         }
+
     }
 
 
@@ -145,7 +148,8 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
                     return@Continuation ref.downloadUrl
                 })?.addOnCompleteListener { task ->
                     if (task.isSuccessful) {
-                        Toast.makeText(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT)
+
+                        Toasty.success(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT)
                             .show()
                         val downloadUri = task.result
 
@@ -155,7 +159,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
                         var model =
                             Vendor_Dish_Model(dish_name, dish_image, dish_description, dish_price)
                         reference!!.child(dish_name).setValue(model).addOnCompleteListener {
-                            Toast.makeText(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT)
+                            Toasty.success(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT)
                                 .show()
 
 
@@ -167,7 +171,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
                             vendor_dish_name.isFocusable
 
                         }.addOnFailureListener {
-                            Toast.makeText(
+                            Toasty.error(
                                 this,
                                 "Something went wrong, Check Connection",
                                 Toast.LENGTH_LONG
@@ -177,7 +181,7 @@ class Vendor_Dish_Add_Data : AppCompatActivity() {
 
                     } else {
                         // Handle failures
-                        Toast.makeText(this, "Something Went wrong, try again", Toast.LENGTH_SHORT)
+                        Toasty.warning(this, "Something Went wrong, try again", Toast.LENGTH_SHORT)
                             .show()
                     }
                 }?.addOnFailureListener {

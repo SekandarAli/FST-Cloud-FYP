@@ -6,6 +6,7 @@ import android.text.method.HideReturnsTransformationMethod
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fstsignin.ADMIN.AdminPanel
 import com.example.fstsignin.Start_Pages.FSTForgetpassword
 import com.example.fstsignin.HOMEPAGE.HOMEPAGE
 import com.example.fstsignin.R
@@ -59,8 +60,18 @@ class FST_Vendor_Signin : AppCompatActivity() {
         vendor_login.setOnClickListener{
 
 
-            intent = Intent(this, Vendor_Main_Page :: class.java)
-            startActivity(intent)
+            if(vendor_signinemail.text.toString() == "admin" && vendor_signinpassword.text.toString() == "123")
+
+            {
+                intent = Intent(this, AdminPanel :: class.java)
+                startActivity(intent)
+
+            }
+
+            else {
+                intent = Intent(this, Vendor_Main_Page::class.java)
+                startActivity(intent)
+            }
 
 
 

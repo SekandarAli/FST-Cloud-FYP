@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import es.dmoral.toasty.Toasty
 import java.util.concurrent.TimeUnit
 
 class OTP : AppCompatActivity() {
@@ -141,7 +142,7 @@ class OTP : AppCompatActivity() {
             override fun onVerificationFailed(e: FirebaseException) {
 
 
-                Toast.makeText(this@OTP, "Failed", Toast.LENGTH_SHORT).show()
+                Toasty.error(this@OTP, "Failed", Toast.LENGTH_SHORT).show()
 
             }
 
@@ -190,7 +191,7 @@ class OTP : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     val user = task.result?.user
-                    Toast.makeText(this, "Code Successfull", Toast.LENGTH_SHORT).show()
+                    Toasty.success(this, "Code Successfull", Toast.LENGTH_SHORT).show()
 
                     intent = Intent(this, HOMEPAGE::class.java)
                     startActivity(intent)
@@ -201,7 +202,7 @@ class OTP : AppCompatActivity() {
 
                     if (task.exception is FirebaseAuthInvalidCredentialsException) {
 
-                        Toast.makeText(this, "Code Entered is incorrect", Toast.LENGTH_SHORT).show()
+                        Toasty.info(this, "Code Entered is incorrect", Toast.LENGTH_SHORT).show()
 
                         intent = Intent(this,FSTRegisterPage::class.java)
                         startActivity(intent)

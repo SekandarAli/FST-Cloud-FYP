@@ -2,16 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fstsignin">
-
-    <queries>
-        <package android:name="com.google.android.apps.maps" />
-    </queries>
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -20,18 +20,10 @@
         android:roundIcon="@drawable/logoo"
         android:supportsRtl="true"
         android:theme="@style/Theme.FSTSignIn">
-        <activity android:name=".SEARCH.Searching_Vendor"></activity>
-        <activity android:name=".SEARCH.Searching_User" />
-        <activity android:name=".VENDOR.Vendor_Main_Page" />
-        <activity android:name=".Start_Pages.Animated_Splash_Screen" />
-        <activity android:name=".Vendor_Dish.showdata_adapter" /> <!-- <activity android:name=".Vendor.Vendor_Main_Page"></activity> -->
-        <!-- <activity android:name=".Vendor.Vendor_Show_Image" /> -->
-        <!-- <activity android:name=".Vendor.Vendor_Add_picture" /> -->
-        <!-- <activity android:name=".Vendor.Vendor_Show_Data" /> -->
-        <!-- <activity android:name=".Vendor.Vendor_Add_Data" /> -->
-        <activity android:name=".Start_Pages.OTP" />
-        <activity android:name=".SIGN_IN.FST_Vendor_Signin" />
-        <activity android:name=".SIGN_UP.FST_Vendor_Signup" />
+        <activity android:name=".ADMIN.AdminPanel"></activity>
+        <activity
+            android:name=".MAPS.Map_User"
+            android:label="@string/title_activity_map_location" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -44,9 +36,19 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
-        <activity
-            android:name=".MAPS.Map_location"
-            android:label="@string/title_activity_map_location" />
+        <activity android:name=".MAPS.Map_Vendor" />
+        <activity android:name=".SEARCH.Searching_Vendor" />
+        <activity android:name=".SEARCH.Searching_User" />
+        <activity android:name=".VENDOR.Vendor_Main_Page" />
+        <activity android:name=".Start_Pages.Animated_Splash_Screen" />
+        <activity android:name=".Vendor_Dish.showdata_adapter" /> <!-- <activity android:name=".Vendor.Vendor_Main_Page"></activity> -->
+        <!-- <activity android:name=".Vendor.Vendor_Show_Image" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Add_picture" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Show_Data" /> -->
+        <!-- <activity android:name=".Vendor.Vendor_Add_Data" /> -->
+        <activity android:name=".Start_Pages.OTP" />
+        <activity android:name=".SIGN_IN.FST_Vendor_Signin" />
+        <activity android:name=".SIGN_UP.FST_Vendor_Signup" />
         <activity android:name=".HOMEPAGE.HOMEPAGE" />
         <activity android:name=".FOOD.FoodMainPageFST" />
         <activity android:name=".SHOP.ShopMainPageFST" />

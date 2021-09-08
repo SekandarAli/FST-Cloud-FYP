@@ -8,8 +8,9 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fstsignin.HOMEPAGE.HOMEPAGE
-import com.example.fstsignin.MAPS.Map_location
 import com.example.fstsignin.*
+import com.example.fstsignin.MAPS.Map_User
+import com.example.fstsignin.MAPS.Map_Vendor
 import com.example.fstsignin.Main_Page_Adapter.Main_horizontal_card_adapter
 import com.example.fstsignin.Main_Page_Adapter.Main_horizontal_list_adapter
 import com.example.fstsignin.Main_Page_Adapter.Main_vertical_adapter
@@ -44,7 +45,7 @@ class TravelMainPageFST : AppCompatActivity() {
 
 
         location.setOnClickListener{
-            intent = Intent(this, Map_location::class.java)
+            intent = Intent(this, Map_User::class.java)
             startActivity(intent)
         }
 

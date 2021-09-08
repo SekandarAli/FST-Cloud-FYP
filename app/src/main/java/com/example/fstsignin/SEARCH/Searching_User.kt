@@ -9,6 +9,7 @@ import com.example.fstsignin.R
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Adapter
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
 import com.google.firebase.database.*
+import es.dmoral.toasty.Toasty
 
 class Searching_User : AppCompatActivity() {
     private lateinit var dbref : DatabaseReference
@@ -87,12 +88,12 @@ class Searching_User : AppCompatActivity() {
                 }
                 else
                 {
-                    Toast.makeText(this@Searching_User, "snapshot does not exist", Toast.LENGTH_SHORT).show()
+                    Toasty.error(this@Searching_User, "Snapshot does not exist", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(this@Searching_User, "Something went wrong", Toast.LENGTH_SHORT).show()
+                Toasty.warning(this@Searching_User, "Something went wrong", Toast.LENGTH_SHORT).show()
             }
         })
 

@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
@@ -14,7 +15,8 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.example.fstsignin.FOOD.FoodFragment
-import com.example.fstsignin.MAPS.Map_location
+import com.example.fstsignin.MAPS.Map_User
+import com.example.fstsignin.MAPS.Map_Vendor
 import com.example.fstsignin.R
 import com.example.fstsignin.SEARCH.Searching_User
 import com.example.fstsignin.SHOP.ShopFragment
@@ -22,6 +24,7 @@ import com.example.fstsignin.Start_Pages.FSTRegisterPage
 import com.example.fstsignin.TRAVEL.TravelFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
+import es.dmoral.toasty.Toasty
 
 class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedListener{
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +33,7 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
         supportActionBar?.hide()
 
+        Toasty.normal(this,"Welcome to FST",Toast.LENGTH_LONG).show()
 
 
 
@@ -59,7 +63,7 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
 
 
         locationn.setOnClickListener{
-            intent = Intent(this, Map_location::class.java)
+            intent = Intent(this, Map_User::class.java)
             startActivity(intent)
         }
 
@@ -135,31 +139,63 @@ class HOMEPAGE : AppCompatActivity() , NavigationView.OnNavigationItemSelectedLi
         when(id)
         {
             R.id.home -> {
-                Toast.makeText(this, "Home Clicked", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "Home Clicked", Toast.LENGTH_SHORT).show()
             }
 
             R.id.about -> {
-                Toast.makeText(this, "About Clicked", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "About Clicked", Toast.LENGTH_SHORT).show()
             }
 
             R.id.contact -> {
-                Toast.makeText(this, "contact Clicked", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "contact Clicked", Toast.LENGTH_SHORT).show()
             }
 
             R.id.setting -> {
-                Toast.makeText(this, "Setting Clicked", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "Setting Clicked", Toast.LENGTH_SHORT).show()
             }
             R.id.support -> {
-                Toast.makeText(this, "Support Clicked", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "Support Clicked", Toast.LENGTH_SHORT).show()
             }
 
             R.id.version -> {
-                Toast.makeText(this, "Version is 1.0.0", Toast.LENGTH_SHORT).show()
+                Toasty.info(this, "Version is 1.0.0", Toast.LENGTH_SHORT).show()
             }
 
              R.id.logout -> {
-                var intent = Intent(this, FSTRegisterPage::class.java)
-                 startActivity(intent)
+
+
+                 val builder = AlertDialog.Builder(this)
+                 builder.setTitle("LOGOUT")
+                 builder.setMessage("Are you sure you want to logout?")
+                 builder.setIcon(R.drawable.ic_logout)
+
+
+                 builder.setPositiveButton("Logout"){dialogInterface, which ->
+
+                     var intent = Intent(this, FSTRegisterPage::class.java)
+                     startActivity(intent)
+
+                 }
+
+//
+//            builder.setNeutralButton("Cancel"){dialogInterface , which ->
+//
+//
+//            }
+
+
+                 builder.setNegativeButton("Cancel"){dialogInterface, which ->
+
+                     //Toast.makeText(this,"Clicked Cancel",Toast.LENGTH_LONG).show()
+
+                 }
+
+                 val alertDialog : AlertDialog = builder.create()
+                 alertDialog.setCancelable(false)
+                 alertDialog.show()
+
+
+
             }
 
 

@@ -11,7 +11,9 @@ import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.fstsignin.MAPS.Map_Vendor
 import com.example.fstsignin.R
+import com.example.fstsignin.SIGN_UP.FST_Vendor_Signup
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Add_Data
 import com.example.fstsignin.Vendor_Dish.Vendor_Dish_Model
 import com.google.android.gms.tasks.Continuation
@@ -19,9 +21,11 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.core.view.View
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.UploadTask
+import es.dmoral.toasty.Toasty
 import java.io.IOException
 import java.util.*
 
@@ -39,7 +43,7 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
     lateinit var vendor_resturant_description: EditText
     lateinit var vendor_resturant_location: EditText
     lateinit var vendor_resturant_chooseImage: Button
-    lateinit var vendor_resturant_next: Button
+    lateinit var vendor_resturant_back: Button
 
     //Strings and constant
 
@@ -58,10 +62,11 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
         setContentView(R.layout.activity_vendor_resturant_add_data)
 
 
-        next = findViewById(R.id.add_data_next)
-        next.setOnClickListener {
+        vendor_resturant_back = findViewById(R.id.add_data_back)
 
-            intent = Intent(this, Vendor_Dish_Add_Data::class.java)
+        vendor_resturant_back.setOnClickListener {
+
+            intent = Intent(this, FST_Vendor_Signup::class.java)
             startActivity(intent)
 
         }
@@ -74,7 +79,6 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
         vendor_resturant_description = findViewById(R.id.vendor_resturant_description)
         vendor_resturant_location = findViewById(R.id.vendor_resturant_location)
         vendor_resturant_imageView = findViewById(R.id.vendor_resturant_image)
-        vendor_resturant_next = findViewById(R.id.add_data_next)
 
         //Firebase Storage Initialization
         db = FirebaseStorage.getInstance()
@@ -91,6 +95,15 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
         }
 
 
+
+        vendor_resturant_location.setOnClickListener{
+
+            intent = Intent(this, Map_Vendor::class.java)
+            startActivity(intent)
+        }
+
+
+
         vendor_resturant_chooseImage.setOnClickListener {
 
             chooseImage()
@@ -98,13 +111,6 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
         }
 
 
-
-
-        vendor_resturant_next.setOnClickListener {
-
-            intent = Intent(this, Vendor_Dish_Add_Data::class.java)
-            startActivity(intent)
-        }
 
         add_data.setOnClickListener {
 
@@ -146,13 +152,13 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
                 return@Continuation ref.downloadUrl
             })?.addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show()
+                    Toasty.success(this, "Image Uploaded Successfully", Toast.LENGTH_SHORT).show()
                     val downloadUri = task.result
 
                     var resturant_image = downloadUri.toString()
                     var model = Vendor_Resturant_Model(resturant_name,resturant_image, resturant_description, resturant_location)
                     reference!!.child(resturant_name).setValue(model).addOnCompleteListener {
-                        Toast.makeText(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT)
+                        Toasty.success(this, "Data Uploaded Successfully", Toast.LENGTH_SHORT)
                             .show()
 
 
@@ -164,7 +170,7 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
                         vendor_resturant_name.isFocusable
 
                     }.addOnFailureListener {
-                        Toast.makeText(
+                        Toasty.error(
                             this,
                             "Something went wrong, Check Connection",
                             Toast.LENGTH_LONG
@@ -174,7 +180,7 @@ class Vendor_Resturant_Add_Data : AppCompatActivity() {
 
                 } else {
                     // Handle failures
-                    Toast.makeText(this, "Something Went wrong, try again", Toast.LENGTH_SHORT)
+                    Toasty.info(this, "Something Went wrong, try again", Toast.LENGTH_SHORT)
                         .show()
                 }
             }?.addOnFailureListener {

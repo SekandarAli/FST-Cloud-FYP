@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import com.example.fstsignin.R
 import com.google.firebase.database.core.view.View
@@ -17,11 +18,15 @@ class Logo : AppCompatActivity() {
 
         val logo: ImageView = findViewById(R.id.start_logo)
 
-        logo.animate().apply {
-            duration = 8000
-            rotationBy(360f)
+        val anim = AnimationUtils.loadAnimation(this,R.anim.anim)
 
-        }.start()
+        logo.startAnimation(anim)
+
+//        logo.animate().apply {
+//            duration = 8000
+//            rotationBy(360f)
+//
+//        }.start()
 
             Handler().postDelayed({
 
